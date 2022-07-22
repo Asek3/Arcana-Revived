@@ -13,11 +13,13 @@ import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.client.gui.UiUtil;
 import net.arcanamod.systems.taint.Taint;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.Minecraft;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.fml.ModList;
 
 // Lets mixin into BiomeColors for taint "biome" water :)
 @OnlyIn(Dist.CLIENT)
@@ -25,7 +27,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class BiomeColorMixin {
 	// TODO: I think that is better way to do this. Currently chunk loading is slower than normal
 	@Inject(method = "getWaterColor(Lnet/minecraft/world/IBlockDisplayReader;Lnet/minecraft/util/math/BlockPos;)I", at = @At("HEAD"), cancellable = true)
-	private static void getWaterColor(IBlockDisplayReader worldIn, BlockPos blockPosIn, CallbackInfoReturnable<Integer> callbackInfoReturnable) {
+	private static void getWaterColor(IBlockDisplayReader world, BlockPos blockPosIn, CallbackInfoReturnable<Integer> callbackInfoReturnable) {
+		IBlockDisplayReader worldIn = HAS_SODIUM ? Minecraft.getInstance().world : world;
+		
 		if (worldIn.getBlockState(blockPosIn.up()).getBlock() != Blocks.WATER) {
 			Iterator<BlockPos> im1 = BlockPos.getAllInBoxMutable(blockPosIn.add(4, 2, 4), blockPosIn.add(-4, -2, -4)).iterator();
 			while (im1.hasNext()) {
@@ -74,5 +78,11 @@ public class BiomeColorMixin {
 				}
 			//}
 		}
+	}
+	
+	private static final boolean HAS_SODIUM;
+	
+	static {
+		HAS_SODIUM = ModList.get().isLoaded("rubidium");
 	}
 }
