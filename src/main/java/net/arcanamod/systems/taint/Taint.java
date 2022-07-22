@@ -5,9 +5,12 @@ import static net.minecraft.entity.EntityClassification.MONSTER;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
@@ -262,8 +265,14 @@ public class Taint{
 			}
 		}
 	}
+	
+	private static Set<BlockPos> taintBlocks = new HashSet<>();
 
 	public static boolean isAreaInTaintBiome(BlockPos pos, IBlockReader world){
+		
+		if(taintBlocks.contains(pos))
+			return true;
+		
 		// check if they're in a taint biome
 		// 7x13x7 cube, centred on the entity
 		// at least 20 tainted blocks
@@ -273,6 +282,7 @@ public class Taint{
 			for(int y = -6; y < 13; y++)
 				for(int z = -3; z < 7; z++){
 					mutable.setPos(pos.getX() + x, pos.getY() + y, pos.getZ() + z);
+					
 					try{
 						BlockState state = world.getBlockState(mutable);
 						if(isTainted(state.getBlock()) && (!state.hasProperty(UNTAINTED) || !state.get(UNTAINTED)))
@@ -280,8 +290,11 @@ public class Taint{
 					}catch(ArrayIndexOutOfBoundsException ignored){
 						// ChunkRenderCache throws this when you try to check somewhere "out-of-bounds".
 					}
-					if(counter >= 20)
+					
+					if(counter >= 20) {
+						taintBlocks.add(pos);
 						return true;
+					}
 				}
 		return false;
 	}
