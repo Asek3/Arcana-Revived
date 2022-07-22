@@ -13,7 +13,6 @@
     "AccessorMinecraft",
     "BiomeColorMixin",
     "BipedModelMixin",
-    "BlockClientMixin",
     "FontRendererAccessor",
     "MinecraftClientMixin"
   ],
