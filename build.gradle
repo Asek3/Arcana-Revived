@@ -128,6 +128,10 @@ jar {
     }
 }
 
+processResources {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 jar.finalizedBy('reobfJar') 
 
 publishing {
