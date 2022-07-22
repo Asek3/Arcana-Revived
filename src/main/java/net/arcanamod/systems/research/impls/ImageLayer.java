@@ -1,15 +1,17 @@
 package net.arcanamod.systems.research.impls;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonPrimitive;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.arcanamod.systems.research.BackgroundLayer;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
+import static net.arcanamod.Arcana.arcLoc;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static net.arcanamod.Arcana.arcLoc;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
+import com.mojang.blaze3d.matrix.MatrixStack;
+
+import net.arcanamod.systems.research.BackgroundLayer;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
 
 public class ImageLayer extends BackgroundLayer{
 	

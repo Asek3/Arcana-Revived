@@ -1,17 +1,18 @@
 package net.arcanamod.client.gui;
 
+import static net.arcanamod.Arcana.arcLoc;
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.containers.PumpContainer;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.Arcana.arcLoc;
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault

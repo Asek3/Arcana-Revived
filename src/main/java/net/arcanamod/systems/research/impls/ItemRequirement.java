@@ -1,5 +1,7 @@
 package net.arcanamod.systems.research.impls;
 
+import static net.arcanamod.Arcana.arcLoc;
+
 import net.arcanamod.systems.research.Requirement;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -7,8 +9,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 public class ItemRequirement extends Requirement{
 	

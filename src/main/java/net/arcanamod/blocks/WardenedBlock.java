@@ -1,5 +1,9 @@
 package net.arcanamod.blocks;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.arcanamod.blocks.tiles.WardenedBlockTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -10,9 +14,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class WardenedBlock extends Block {
 	protected WardenedBlockTileEntity t;

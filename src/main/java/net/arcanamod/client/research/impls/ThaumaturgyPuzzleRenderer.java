@@ -1,13 +1,14 @@
 package net.arcanamod.client.research.impls;
 
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.client.research.PuzzleRenderer;
 import net.arcanamod.containers.slots.AspectSlot;
 import net.arcanamod.systems.research.impls.Thaumaturgy;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Slot;
-
-import java.util.List;
 
 public class ThaumaturgyPuzzleRenderer implements PuzzleRenderer<Thaumaturgy> {
 	@Override

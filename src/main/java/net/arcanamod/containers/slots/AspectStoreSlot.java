@@ -1,12 +1,13 @@
 package net.arcanamod.containers.slots;
 
+import java.util.function.Supplier;
+
+import javax.annotation.Nonnull;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.handlers.AspectBattery;
 import net.arcanamod.aspects.handlers.AspectHandler;
-
-import javax.annotation.Nonnull;
-import java.util.function.Supplier;
 
 public class AspectStoreSlot extends AspectSlot{
 	

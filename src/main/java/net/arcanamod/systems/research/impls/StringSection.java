@@ -1,9 +1,9 @@
 package net.arcanamod.systems.research.impls;
 
+import java.util.Objects;
+
 import net.arcanamod.systems.research.EntrySection;
 import net.minecraft.nbt.CompoundNBT;
-
-import java.util.Objects;
 
 /**
  * An entry section that displays text over any number of pages.

@@ -1,13 +1,28 @@
 package net.arcanamod.world;
 
+import static net.arcanamod.Arcana.arcLoc;
+import static net.arcanamod.aspects.AspectUtils.primalAspects;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Random;
+import java.util.Set;
+
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
+
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.ItemAspectRegistry;
-import net.arcanamod.aspects.handlers.*;
+import net.arcanamod.aspects.handlers.AspectBattery;
+import net.arcanamod.aspects.handlers.AspectCell;
+import net.arcanamod.aspects.handlers.AspectHandler;
+import net.arcanamod.aspects.handlers.AspectHolder;
+import net.arcanamod.aspects.handlers.VisUtils;
 import net.arcanamod.client.render.particles.ArcanaParticles;
 import net.arcanamod.client.render.particles.NodeParticleData;
 import net.arcanamod.items.settings.GogglePriority;
@@ -25,11 +40,6 @@ import net.minecraft.world.IWorld;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fluids.IFluidBlock;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.*;
-
-import static net.arcanamod.Arcana.arcLoc;
-import static net.arcanamod.aspects.AspectUtils.primalAspects;
 
 // Although IDEA complains about class loading deadlock, this only occurs under specific conditions.
 // Handles type-specific things, such as behaviour and vis generation rates.

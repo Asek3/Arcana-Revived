@@ -1,6 +1,15 @@
 package net.arcanamod.systems.research;
 
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+import javax.annotation.Nullable;
+
 import com.google.gson.JsonObject;
+
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.containers.ResearchTableContainer;
 import net.arcanamod.containers.slots.AspectSlot;
@@ -12,13 +21,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
-
-import javax.annotation.Nullable;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.function.Supplier;
 
 public abstract class Puzzle{
 	

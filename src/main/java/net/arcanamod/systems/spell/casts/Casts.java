@@ -2,7 +2,16 @@ package net.arcanamod.systems.spell.casts;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
-import net.arcanamod.systems.spell.casts.impl.*;
+
+import net.arcanamod.systems.spell.casts.impl.ArmourCast;
+import net.arcanamod.systems.spell.casts.impl.DeathCast;
+import net.arcanamod.systems.spell.casts.impl.ExchangeCast;
+import net.arcanamod.systems.spell.casts.impl.FabricCast;
+import net.arcanamod.systems.spell.casts.impl.IceCast;
+import net.arcanamod.systems.spell.casts.impl.JourneyCast;
+import net.arcanamod.systems.spell.casts.impl.LifeCast;
+import net.arcanamod.systems.spell.casts.impl.MiningCast;
+import net.arcanamod.systems.spell.casts.impl.VacuumCast;
 import net.minecraft.util.ResourceLocation;
 
 public class Casts {

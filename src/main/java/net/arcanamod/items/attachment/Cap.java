@@ -1,9 +1,11 @@
 package net.arcanamod.items.attachment;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Optional;
+
 import net.arcanamod.Arcana;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.*;
 
 /**
  * Represents a type of wand cap. Provides access to relevant stats, such as the cap's

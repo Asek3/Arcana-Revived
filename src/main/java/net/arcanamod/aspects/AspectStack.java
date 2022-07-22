@@ -1,10 +1,11 @@
 package net.arcanamod.aspects;
 
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
+import java.util.Objects;
 
 import javax.annotation.Nonnull;
-import java.util.Objects;
+
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
 
 public class AspectStack{
 	

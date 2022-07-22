@@ -3,7 +3,6 @@ package net.arcanamod.client.model.tainted;
 import net.arcanamod.entities.tainted.TaintedEntity;
 import net.minecraft.client.renderer.entity.model.QuadrupedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.passive.SheepEntity;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 

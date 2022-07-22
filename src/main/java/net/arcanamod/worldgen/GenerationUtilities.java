@@ -1,8 +1,8 @@
 package net.arcanamod.worldgen;
 
-import net.minecraft.util.math.BlockPos;
-
 import java.util.ArrayList;
+
+import net.minecraft.util.math.BlockPos;
 
 /**
  * @author Mozaran

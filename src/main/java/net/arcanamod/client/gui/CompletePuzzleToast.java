@@ -1,7 +1,11 @@
 package net.arcanamod.client.gui;
 
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.items.ArcanaItems;
 import net.arcanamod.systems.research.ResearchEntry;
@@ -9,9 +13,6 @@ import net.minecraft.client.gui.toasts.IToast;
 import net.minecraft.client.gui.toasts.ToastGui;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

@@ -1,8 +1,13 @@
 package net.arcanamod.blocks.tiles;
 
+import java.util.Objects;
+import java.util.Optional;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNullableByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.blocks.ArcanaBlocks;
-import net.arcanamod.items.ArcanaItems;
 import net.arcanamod.items.MagicDeviceItem;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -14,11 +19,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNullableByDefault;
-import java.util.Objects;
-import java.util.Optional;
 
 @ParametersAreNullableByDefault
 @MethodsReturnNonnullByDefault

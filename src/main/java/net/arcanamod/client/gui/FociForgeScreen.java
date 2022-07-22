@@ -1,6 +1,12 @@
 package net.arcanamod.client.gui;
 
+import static net.arcanamod.containers.FociForgeContainer.ASPECT_H_COUNT;
+import static net.arcanamod.containers.FociForgeContainer.ASPECT_V_COUNT;
+
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
@@ -17,11 +23,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.ITextComponent;
-
-import java.util.List;
-
-import static net.arcanamod.containers.FociForgeContainer.ASPECT_H_COUNT;
-import static net.arcanamod.containers.FociForgeContainer.ASPECT_V_COUNT;
 
 public class FociForgeScreen extends AspectContainerScreen<FociForgeContainer> {
 	public static final int WIDTH = 397;

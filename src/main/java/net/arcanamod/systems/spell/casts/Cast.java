@@ -1,20 +1,46 @@
 package net.arcanamod.systems.spell.casts;
 
+import static net.arcanamod.aspects.Aspects.AIR;
+import static net.arcanamod.aspects.Aspects.CHAOS;
+import static net.arcanamod.aspects.Aspects.EARTH;
+import static net.arcanamod.aspects.Aspects.ENVY;
+import static net.arcanamod.aspects.Aspects.FIRE;
+import static net.arcanamod.aspects.Aspects.GLUTTONY;
+import static net.arcanamod.aspects.Aspects.GREED;
+import static net.arcanamod.aspects.Aspects.LUST;
+import static net.arcanamod.aspects.Aspects.ORDER;
+import static net.arcanamod.aspects.Aspects.PRIDE;
+import static net.arcanamod.aspects.Aspects.SLOTH;
+import static net.arcanamod.aspects.Aspects.WATER;
+import static net.arcanamod.aspects.Aspects.WRATH;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.Random;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
+
 import net.arcanamod.aspects.Aspect;
-import net.arcanamod.entities.*;
+import net.arcanamod.entities.BlastEmitterEntity;
+import net.arcanamod.entities.SpellCloudEntity;
+import net.arcanamod.entities.SpellEggEntity;
+import net.arcanamod.entities.SpellTrapEntity;
 import net.arcanamod.items.ArcanaItems;
-import net.arcanamod.systems.spell.Homeable;
 import net.arcanamod.util.Pair;
 import net.arcanamod.util.RayTraceUtils;
-import net.minecraft.entity.*;
+import net.minecraft.entity.CreatureEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
-import net.minecraft.particles.IParticleData;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ActionResultType;
@@ -22,20 +48,8 @@ import net.minecraft.util.EntityPredicates;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
-import java.awt.*;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
-import java.util.UUID;
-import java.util.stream.Collectors;
-
-import static net.arcanamod.aspects.Aspects.*;
 
 /**
  * ISpell class but it self registers.

@@ -1,6 +1,14 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
+import static net.arcanamod.client.gui.ResearchEntryScreen.TEXT_SCALING;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.client.gui.ResearchEntryScreen;
 import net.arcanamod.client.research.EntrySectionRenderer;
 import net.arcanamod.client.research.TextFormatter;
@@ -8,13 +16,6 @@ import net.arcanamod.systems.research.impls.StringSection;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.PlayerEntity;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
-import static net.arcanamod.client.gui.ResearchEntryScreen.TEXT_SCALING;
 
 public class StringSectionRenderer implements EntrySectionRenderer<StringSection>{
 	

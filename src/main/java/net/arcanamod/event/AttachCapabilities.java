@@ -1,6 +1,10 @@
 package net.arcanamod.event;
 
-import net.arcanamod.capabilities.*;
+import net.arcanamod.capabilities.AuraChunkCapability;
+import net.arcanamod.capabilities.Researcher;
+import net.arcanamod.capabilities.ResearcherCapability;
+import net.arcanamod.capabilities.TaintTrackable;
+import net.arcanamod.capabilities.TaintTrackableCapability;
 import net.arcanamod.network.Connection;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

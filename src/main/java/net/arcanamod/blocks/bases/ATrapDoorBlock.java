@@ -1,12 +1,12 @@
 package net.arcanamod.blocks.bases;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.Block;
 import net.minecraft.block.TrapDoorBlock;
 import net.minecraft.state.properties.Half;
 import net.minecraft.util.Direction;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 // same BS as the sapling block - probably just going to AT these
 @ParametersAreNonnullByDefault

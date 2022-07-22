@@ -1,5 +1,9 @@
 package net.arcanamod.items.recipes;
 
+import java.util.Set;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.containers.slots.WandSlot;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,9 +12,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Set;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

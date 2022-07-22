@@ -1,5 +1,8 @@
 package net.arcanamod.blocks.tiles;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import net.arcanamod.blocks.multiblocks.taint_scrubber.ITaintScrubberExtension;
 import net.arcanamod.util.Pair;
 import net.minecraft.block.BlockState;
@@ -7,9 +10,6 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TaintScrubberTileEntity extends TileEntity implements ITickableTileEntity {
 

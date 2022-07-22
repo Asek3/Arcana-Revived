@@ -1,6 +1,8 @@
 package net.arcanamod.network;
 
 
+import java.util.function.Supplier;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.capabilities.Researcher;
@@ -10,8 +12,6 @@ import net.arcanamod.systems.research.Puzzle;
 import net.arcanamod.systems.research.ResearchBooks;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent;
-
-import java.util.function.Supplier;
 
 public class PkSyncPlayerFlux{
 	

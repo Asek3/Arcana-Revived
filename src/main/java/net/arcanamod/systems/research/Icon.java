@@ -1,6 +1,15 @@
 package net.arcanamod.systems.research;
 
+import java.util.Collection;
+import java.util.regex.Pattern;
+
+import javax.annotation.Nullable;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -8,12 +17,6 @@ import net.minecraft.nbt.JsonToNBT;
 import net.minecraft.nbt.StringNBT;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.regex.Pattern;
 
 /**
  * An icon associated with a research entry or pin. This can either directly reference an image file, or the texture of an item

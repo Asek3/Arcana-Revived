@@ -1,5 +1,7 @@
 package net.arcanamod.blocks.tiles;
 
+import javax.annotation.Nonnull;
+
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.handlers.AspectBattery;
@@ -8,8 +10,6 @@ import net.arcanamod.aspects.handlers.AspectHandlerCapability;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
-
-import javax.annotation.Nonnull;
 
 public class AspectTesterTileEntity extends TileEntity{
 	

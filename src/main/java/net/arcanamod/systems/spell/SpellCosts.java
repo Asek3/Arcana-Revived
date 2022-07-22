@@ -1,11 +1,10 @@
 package net.arcanamod.systems.spell;
 
-import net.arcanamod.aspects.Aspect;
-import net.arcanamod.aspects.AspectStack;
-import net.arcanamod.aspects.Aspects;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import net.arcanamod.aspects.AspectStack;
+import net.arcanamod.aspects.Aspects;
 
 /*
     This class is totally useless

@@ -1,12 +1,13 @@
 package net.arcanamod.worldgen.trees;
 
+import java.util.Random;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import net.arcanamod.worldgen.ArcanaFeatures;
 import net.minecraft.block.trees.BigTree;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Random;
 
 @ParametersAreNonnullByDefault
 public class TaintedGreatwoodTree extends BigTree{

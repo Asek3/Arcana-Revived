@@ -1,8 +1,9 @@
 package net.arcanamod.mixin;
 
-import net.minecraft.client.Minecraft;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
+
+import net.minecraft.client.Minecraft;
 
 @Mixin(Minecraft.class)
 public interface AccessorMinecraft {

@@ -1,9 +1,14 @@
 package net.arcanamod.fluids;
 
+import java.util.Random;
+import java.util.function.Supplier;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
+import net.arcanamod.effects.ArcanaEffects;
 import net.arcanamod.entities.TaintedGooWrapper;
 import net.arcanamod.systems.taint.Taint;
-import net.arcanamod.effects.ArcanaEffects;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.entity.Entity;
@@ -13,10 +18,6 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Random;
-import java.util.function.Supplier;
 
 @SuppressWarnings("deprecation")
 @ParametersAreNonnullByDefault

@@ -1,5 +1,10 @@
 package net.arcanamod.compat.jei;
 
+import static net.arcanamod.ArcanaVariables.arcLoc;
+import static net.arcanamod.compat.ArcanaJeiPlugin.CRYSTAL_UUID;
+
+import java.util.Collections;
+
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -7,17 +12,11 @@ import mezz.jei.api.gui.ingredient.IGuiItemStackGroup;
 import mezz.jei.api.helpers.IJeiHelpers;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.items.ArcanaItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.Collections;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
-import static net.arcanamod.compat.ArcanaJeiPlugin.CRYSTAL_UUID;
 
 public class CrystalStudyCategory implements IRecipeCategory<DummyRecipe> {
     private final IJeiHelpers jeiHelpers;

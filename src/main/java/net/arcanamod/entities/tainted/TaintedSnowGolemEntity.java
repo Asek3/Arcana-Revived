@@ -2,7 +2,6 @@ package net.arcanamod.entities.tainted;
 
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.passive.SnowGolemEntity;

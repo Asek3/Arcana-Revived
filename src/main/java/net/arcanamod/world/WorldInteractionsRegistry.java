@@ -1,20 +1,22 @@
 package net.arcanamod.world;
 
+import static net.arcanamod.world.WorldInteractions.freezable;
+
+import java.util.Map;
+
+import javax.annotation.Nonnull;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+
 import net.arcanamod.util.Pair;
 import net.minecraft.client.resources.JsonReloadListener;
 import net.minecraft.profiler.IProfiler;
 import net.minecraft.resources.IResourceManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.annotation.Nonnull;
-import java.util.Map;
-
-import static net.arcanamod.world.WorldInteractions.freezable;
 
 public class WorldInteractionsRegistry extends JsonReloadListener{
 	

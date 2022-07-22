@@ -1,11 +1,11 @@
 package net.arcanamod.systems.spell.casts;
 
-import net.arcanamod.util.Pair;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Consumer;
+
+import net.arcanamod.util.Pair;
 
 public class ToggleableCast {
 	public static List<Pair<UUID, ToggleableCast.Impl>> toggleableCasts = new ArrayList<>();

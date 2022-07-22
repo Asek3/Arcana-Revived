@@ -1,12 +1,18 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
+import static net.arcanamod.client.gui.ResearchEntryScreen.PAGE_HEIGHT;
+import static net.arcanamod.client.gui.ResearchEntryScreen.PAGE_WIDTH;
+import static net.arcanamod.client.gui.ResearchEntryScreen.PAGE_X;
+import static net.arcanamod.client.gui.ResearchEntryScreen.PAGE_Y;
+import static net.arcanamod.client.gui.ResearchEntryScreen.RIGHT_X_OFFSET;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.client.gui.ClientUiUtil;
 import net.arcanamod.client.research.EntrySectionRenderer;
 import net.arcanamod.systems.research.impls.ImageSection;
 import net.minecraft.entity.player.PlayerEntity;
-
-import static net.arcanamod.client.gui.ResearchEntryScreen.*;
 
 public class ImageSectionRenderer implements EntrySectionRenderer<ImageSection>{
 	

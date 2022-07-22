@@ -1,17 +1,18 @@
 package net.arcanamod.commands;
 
+import static net.minecraft.command.Commands.argument;
+import static net.minecraft.command.Commands.literal;
+
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
+
 import net.arcanamod.world.AuraView;
 import net.arcanamod.world.ServerAuraView;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.arguments.Vec3Argument;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import static net.minecraft.command.Commands.argument;
-import static net.minecraft.command.Commands.literal;
 
 public class TaintCommand{
 	

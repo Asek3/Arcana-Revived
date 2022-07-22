@@ -1,7 +1,18 @@
 package net.arcanamod.client.research;
 
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.annotation.Nullable;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
@@ -26,15 +37,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.Style;
 import net.minecraftforge.fml.ModList;
-
-import javax.annotation.Nullable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
 
 public final class TextFormatter{
 	

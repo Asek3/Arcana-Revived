@@ -1,17 +1,17 @@
 package net.arcanamod.systems.spell.casts.impl;
 
+import static net.arcanamod.aspects.Aspects.HARVEST;
+
 import net.arcanamod.ArcanaVariables;
-import net.arcanamod.util.NotImplementedException;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.systems.spell.casts.Cast;
+import net.arcanamod.util.NotImplementedException;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import static net.arcanamod.aspects.Aspects.HARVEST;
 
 public class HarvestCast extends Cast {
 	@Override

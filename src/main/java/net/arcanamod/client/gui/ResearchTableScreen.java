@@ -1,8 +1,13 @@
 package net.arcanamod.client.gui;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.blocks.tiles.ResearchTableTileEntity;
@@ -21,9 +26,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.fml.client.gui.GuiUtils;
-
-import javax.annotation.Nonnull;
-import java.util.List;
 
 public class ResearchTableScreen extends AspectContainerScreen<ResearchTableContainer> {
 	public static final int WIDTH = 378;

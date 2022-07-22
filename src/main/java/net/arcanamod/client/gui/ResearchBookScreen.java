@@ -1,15 +1,43 @@
 package net.arcanamod.client.gui;
 
+import static java.lang.Math.abs;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static java.lang.Math.sin;
+import static net.arcanamod.client.gui.ClientUiUtil.drawModalRectWithCustomSizedTexture;
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+import static net.minecraft.util.math.MathHelper.clamp;
+import static org.lwjgl.opengl.GL11.GL_SCISSOR_TEST;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import org.lwjgl.opengl.GL11;
+
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.client.research.BackgroundLayerRenderers;
 import net.arcanamod.network.Connection;
 import net.arcanamod.network.PkModifyPins;
-import net.arcanamod.systems.research.*;
+import net.arcanamod.systems.research.Icon;
+import net.arcanamod.systems.research.Parent;
+import net.arcanamod.systems.research.Pin;
+import net.arcanamod.systems.research.ResearchBook;
+import net.arcanamod.systems.research.ResearchBooks;
+import net.arcanamod.systems.research.ResearchCategory;
+import net.arcanamod.systems.research.ResearchEntry;
 import net.arcanamod.util.Pair;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.Screen;
@@ -27,22 +55,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.fml.client.gui.GuiUtils;
-import org.lwjgl.opengl.GL11;
-
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Collectors;
-
-import static java.lang.Math.*;
-import static net.arcanamod.client.gui.ClientUiUtil.drawModalRectWithCustomSizedTexture;
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
-import static net.minecraft.util.math.MathHelper.clamp;
-import static org.lwjgl.opengl.GL11.GL_SCISSOR_TEST;
 
 public class ResearchBookScreen extends Screen {
 	ResearchBook book;

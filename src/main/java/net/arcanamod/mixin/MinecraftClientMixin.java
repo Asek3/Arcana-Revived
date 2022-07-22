@@ -1,12 +1,7 @@
 package net.arcanamod.mixin;
 
-import net.arcanamod.ClientProxy;
-import net.arcanamod.client.gui.SwapFocusScreen;
-import net.arcanamod.items.MagicDeviceItem;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.player.ClientPlayerEntity;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.util.Hand;
+import javax.annotation.Nullable;
+
 import org.apache.logging.log4j.Logger;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,7 +10,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import javax.annotation.Nullable;
+import net.arcanamod.ClientProxy;
+import net.arcanamod.client.gui.SwapFocusScreen;
+import net.arcanamod.items.MagicDeviceItem;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.player.ClientPlayerEntity;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.util.Hand;
 
 @Mixin(Minecraft.class)
 public abstract class MinecraftClientMixin{

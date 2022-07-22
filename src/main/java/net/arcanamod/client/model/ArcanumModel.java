@@ -1,17 +1,15 @@
 package net.arcanamod.client.model;
 
+import java.util.List;
+
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
-import net.arcanamod.ArcanaVariables;
+
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.model.BookModel;
 import net.minecraft.client.renderer.model.Model;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
-
-import java.util.List;
 
 public class ArcanumModel extends Model {
 	private final ModelRenderer coverRight = (new ModelRenderer(48, 48, 27, 21)).addBox(-4.0F, -4.0F, -1F, 9.0F, 12.0F, 1.0F);

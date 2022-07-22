@@ -1,11 +1,33 @@
 package net.arcanamod.worldgen;
 
+import static net.arcanamod.Arcana.MODID;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withAllForestFlowerGeneration;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withCavesAndCanyons;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withCommonOverworldBlocks;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withDefaultFlowers;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withDisks;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withForestBirchTrees;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withForestGrass;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withFrozenTopLayer;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withLavaAndWaterLakes;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withLavaAndWaterSprings;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withMonsterRoom;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withNormalMushroomGeneration;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withOverworldOres;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withStrongholdAndMineshaft;
+import static net.minecraft.world.biome.DefaultBiomeFeatures.withSugarCaneAndPumpkins;
+
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.biome.*;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeAmbience;
+import net.minecraft.world.biome.BiomeGenerationSettings;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
+import net.minecraft.world.biome.MobSpawnInfo;
+import net.minecraft.world.biome.MoodSoundAmbience;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.common.BiomeDictionary;
@@ -13,9 +35,6 @@ import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.arcanamod.Arcana.MODID;
-import static net.minecraft.world.biome.DefaultBiomeFeatures.*;
 
 public class ArcanaBiomes{
 	

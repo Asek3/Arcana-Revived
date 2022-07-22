@@ -1,9 +1,13 @@
 package net.arcanamod.event;
 
+import static net.arcanamod.ArcanaVariables.arcLoc;
+
 import com.mojang.brigadier.CommandDispatcher;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.ItemAspectRegistry;
+import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.commands.FillAspectCommand;
 import net.arcanamod.commands.NodeCommand;
 import net.arcanamod.commands.ResearchCommand;
@@ -13,24 +17,18 @@ import net.arcanamod.network.Connection;
 import net.arcanamod.network.PkSyncResearch;
 import net.arcanamod.systems.research.ResearchBooks;
 import net.arcanamod.systems.research.ResearchLoader;
-import net.arcanamod.capabilities.Researcher;
-import net.arcanamod.world.WorldInteractions;
 import net.arcanamod.world.WorldInteractionsRegistry;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.command.CommandSource;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.resources.IReloadableResourceManager;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.event.server.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.network.PacketDistributor;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
 
 /**
  * Class for handling any events that occur upon world load

@@ -1,31 +1,30 @@
 package net.arcanamod.commands;
 
+import static net.minecraft.command.Commands.argument;
+import static net.minecraft.command.Commands.literal;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Random;
+
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.Message;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
+
 import net.arcanamod.world.Node;
 import net.arcanamod.world.NodeType;
 import net.arcanamod.world.ServerAuraView;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.ISuggestionProvider;
-import net.minecraft.command.arguments.ArgumentSerializer;
-import net.minecraft.command.arguments.ArgumentTypes;
 import net.minecraft.command.arguments.ResourceLocationArgument;
 import net.minecraft.command.arguments.Vec3Argument;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Random;
-
-import static net.minecraft.command.Commands.argument;
-import static net.minecraft.command.Commands.literal;
 
 public class NodeCommand{
 	

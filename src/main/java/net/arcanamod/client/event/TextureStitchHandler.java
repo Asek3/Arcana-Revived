@@ -1,5 +1,7 @@
 package net.arcanamod.client.event;
 
+import javax.annotation.Nonnull;
+
 import net.arcanamod.ArcanaVariables;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
@@ -15,8 +17,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(Dist.CLIENT)
 public class TextureStitchHandler {

@@ -1,6 +1,12 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.aspects.AspectUtils.areAspectsConnected;
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.client.gui.ClientUiUtil;
@@ -11,11 +17,6 @@ import net.minecraft.client.gui.AbstractGui;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.List;
-
-import static net.arcanamod.aspects.AspectUtils.areAspectsConnected;
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
 
 public class ChemistryPuzzleRenderer extends AbstractGui implements PuzzleRenderer<Chemistry>{
 	

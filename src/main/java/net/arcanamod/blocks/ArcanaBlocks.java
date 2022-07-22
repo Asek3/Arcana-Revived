@@ -1,9 +1,32 @@
 package net.arcanamod.blocks;
 
+import static net.arcanamod.systems.taint.Taint.deadOf;
+import static net.arcanamod.systems.taint.Taint.taintedOf;
+import static net.arcanamod.util.annotations.GIM.Type.BLOCK_REF;
+import static net.minecraft.block.AbstractBlock.Properties.create;
+import static net.minecraft.block.AbstractBlock.Properties.from;
+import static net.minecraft.block.material.Material.AIR;
+import static net.minecraft.block.material.Material.GLASS;
+import static net.minecraft.block.material.Material.IRON;
+import static net.minecraft.block.material.Material.MISCELLANEOUS;
+import static net.minecraft.block.material.Material.PLANTS;
+import static net.minecraft.block.material.Material.ROCK;
+import static net.minecraft.block.material.Material.WOOD;
+import static net.minecraft.block.material.MaterialColor.BLACK;
+import static net.minecraft.block.material.MaterialColor.SAND;
+
+import java.util.function.ToIntFunction;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaSounds;
 import net.arcanamod.aspects.Aspects;
-import net.arcanamod.blocks.bases.*;
+import net.arcanamod.blocks.bases.ADoorBlock;
+import net.arcanamod.blocks.bases.APressurePlateBlock;
+import net.arcanamod.blocks.bases.ASaplingBlock;
+import net.arcanamod.blocks.bases.ATrapDoorBlock;
+import net.arcanamod.blocks.bases.AWoodButtonBlock;
+import net.arcanamod.blocks.bases.HorizontalWaterloggableBlock;
+import net.arcanamod.blocks.bases.SolidVisibleBlock;
 import net.arcanamod.blocks.multiblocks.foci_forge.FociForgeComponentBlock;
 import net.arcanamod.blocks.multiblocks.foci_forge.FociForgeCoreBlock;
 import net.arcanamod.blocks.multiblocks.research_table.ResearchTableComponentBlock;
@@ -22,24 +45,26 @@ import net.arcanamod.worldgen.trees.GreatwoodTree;
 import net.arcanamod.worldgen.trees.SilverwoodTree;
 import net.arcanamod.worldgen.trees.TaintedGreatwoodTree;
 import net.arcanamod.worldgen.trees.TaintedOakTree;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FenceBlock;
+import net.minecraft.block.FenceGateBlock;
+import net.minecraft.block.GlassBlock;
+import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.PressurePlateBlock;
 import net.minecraft.block.PressurePlateBlock.Sensitivity;
+import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.WallBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.function.ToIntFunction;
-
-import static net.arcanamod.systems.taint.Taint.deadOf;
-import static net.arcanamod.systems.taint.Taint.taintedOf;
-import static net.arcanamod.util.annotations.GIM.Type.BLOCK_REF;
-import static net.minecraft.block.AbstractBlock.Properties.create;
-import static net.minecraft.block.AbstractBlock.Properties.from;
-import static net.minecraft.block.material.Material.*;
-import static net.minecraft.block.material.MaterialColor.BLACK;
-import static net.minecraft.block.material.MaterialColor.SAND;
 
 @SuppressWarnings("unused")
 public class ArcanaBlocks{

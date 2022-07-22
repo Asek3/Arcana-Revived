@@ -1,7 +1,14 @@
 package net.arcanamod.client.research.impls;
 
+import static net.minecraft.client.util.ITooltipFlag.TooltipFlags.ADVANCED;
+import static net.minecraft.client.util.ITooltipFlag.TooltipFlags.NORMAL;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.client.research.RequirementRenderer;
 import net.arcanamod.systems.research.impls.ItemTagRequirement;
 import net.minecraft.client.Minecraft;
@@ -13,12 +20,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static net.minecraft.client.util.ITooltipFlag.TooltipFlags.ADVANCED;
-import static net.minecraft.client.util.ITooltipFlag.TooltipFlags.NORMAL;
 
 public class ItemTagRequirementRenderer implements RequirementRenderer<ItemTagRequirement>{
 	

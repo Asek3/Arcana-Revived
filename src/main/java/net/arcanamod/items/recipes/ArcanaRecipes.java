@@ -1,11 +1,13 @@
 package net.arcanamod.items.recipes;
 
-import net.minecraft.item.crafting.*;
+import static net.arcanamod.Arcana.MODID;
+
+import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.item.crafting.IRecipeType;
+import net.minecraft.item.crafting.SpecialRecipeSerializer;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.arcanamod.Arcana.MODID;
 
 public class ArcanaRecipes{
 	public static class Serializers{

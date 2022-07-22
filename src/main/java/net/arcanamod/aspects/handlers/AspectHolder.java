@@ -1,13 +1,13 @@
 package net.arcanamod.aspects.handlers;
 
+import java.util.List;
+import java.util.function.Consumer;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.Aspects;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraftforge.common.util.INBTSerializable;
-
-import java.util.List;
-import java.util.function.Consumer;
 
 public interface AspectHolder extends INBTSerializable<CompoundNBT>{
 	

@@ -1,11 +1,11 @@
 package net.arcanamod.effects;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectType;
 import net.minecraft.util.DamageSource;
-
-import javax.annotation.Nonnull;
 
 public class FrozenEffect extends Effect{
 	

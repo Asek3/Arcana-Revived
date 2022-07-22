@@ -1,5 +1,7 @@
 package net.arcanamod.client;
 
+import javax.annotation.Nullable;
+
 import net.arcanamod.client.gui.CompletePuzzleToast;
 import net.arcanamod.client.gui.ResearchBookScreen;
 import net.arcanamod.client.gui.ResearchEntryScreen;
@@ -12,9 +14,11 @@ import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
-import net.minecraft.util.text.*;
-
-import javax.annotation.Nullable;
+import net.minecraft.util.text.Color;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 
 public class ClientUtils {
     public static void openResearchBookUI(ResourceLocation book, Screen parentScreen, ItemStack sender){

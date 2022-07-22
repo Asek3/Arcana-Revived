@@ -1,5 +1,10 @@
 package net.arcanamod.items;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.blocks.CrystalClusterBlock;
 import net.minecraft.advancements.CriteriaTriggers;
@@ -27,10 +32,6 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.List;
 
 /**
  * Copy of BlockItem, but allows specifying growth stage & uses different render layer.

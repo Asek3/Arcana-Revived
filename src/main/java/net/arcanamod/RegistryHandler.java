@@ -1,6 +1,21 @@
 package net.arcanamod;
 
+import static net.arcanamod.Arcana.arcLoc;
+import static net.arcanamod.worldgen.ArcanaFeatures.GREATWOOD_TREE;
+import static net.arcanamod.worldgen.ArcanaFeatures.GREATWOOD_TREE_CONFIG;
+import static net.arcanamod.worldgen.ArcanaFeatures.MAGICAL_FOREST_BONUS_TREES;
+import static net.arcanamod.worldgen.ArcanaFeatures.MAGICAL_FOREST_GIANT_MUSHROOMS;
+import static net.arcanamod.worldgen.ArcanaFeatures.MAGIC_MUSHROOM_PATCH;
+import static net.arcanamod.worldgen.ArcanaFeatures.NODE;
+import static net.arcanamod.worldgen.ArcanaFeatures.SILVERWOOD_TREE;
+import static net.arcanamod.worldgen.ArcanaFeatures.SILVERWOOD_TREE_CONFIG;
+import static net.arcanamod.worldgen.ArcanaFeatures.TAINTED_GREATWOOD_TREE;
+import static net.arcanamod.worldgen.ArcanaFeatures.TAINTED_GREATWOOD_TREE_CONFIG;
+import static net.arcanamod.worldgen.ArcanaFeatures.TAINTED_OAK_TREE;
+import static net.arcanamod.worldgen.ArcanaFeatures.TAINTED_OAK_TREE_CONFIG;
+
 import com.google.common.collect.ImmutableList;
+
 import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.CrystalClusterBlock;
@@ -16,7 +31,13 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
-import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
+import net.minecraft.world.gen.feature.BlockClusterFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.MultipleRandomFeatureConfig;
+import net.minecraft.world.gen.feature.TwoLayerFeature;
 import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
@@ -27,9 +48,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.registries.IForgeRegistry;
-
-import static net.arcanamod.Arcana.arcLoc;
-import static net.arcanamod.worldgen.ArcanaFeatures.*;
 
 @EventBusSubscriber(modid = Arcana.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class RegistryHandler{

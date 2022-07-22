@@ -1,6 +1,10 @@
 package net.arcanamod.systems.spell.modules.circle;
 
+import java.awt.Point;
+import java.util.Arrays;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.aspects.Aspects;
@@ -8,9 +12,6 @@ import net.arcanamod.client.gui.ClientUiUtil;
 import net.arcanamod.systems.spell.modules.SpellModule;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.nbt.CompoundNBT;
-
-import java.awt.*;
-import java.util.Arrays;
 
 public class SingleModifierCircle extends SpellModule{
 	public Aspect aspect = Aspects.EMPTY;

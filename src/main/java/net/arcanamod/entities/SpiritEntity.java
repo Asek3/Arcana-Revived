@@ -1,5 +1,8 @@
 package net.arcanamod.entities;
 
+import java.util.EnumSet;
+import java.util.Random;
+
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.FlyingEntity;
 import net.minecraft.entity.LivingEntity;
@@ -11,9 +14,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
-
-import java.util.EnumSet;
-import java.util.Random;
 
 public class SpiritEntity extends FlyingEntity implements IFlyingAnimal {
     public SpiritEntity(EntityType<? extends SpiritEntity> type, World world){

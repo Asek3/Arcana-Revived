@@ -1,17 +1,27 @@
 package net.arcanamod.systems.research;
 
-import net.arcanamod.systems.research.impls.*;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.ListNBT;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
+import static net.arcanamod.util.StreamUtils.streamAndApply;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static net.arcanamod.util.StreamUtils.streamAndApply;
+import net.arcanamod.systems.research.impls.AlchemySection;
+import net.arcanamod.systems.research.impls.ArcaneCraftingSection;
+import net.arcanamod.systems.research.impls.AspectCombosSection;
+import net.arcanamod.systems.research.impls.CraftingSection;
+import net.arcanamod.systems.research.impls.ImageSection;
+import net.arcanamod.systems.research.impls.SmeltingSection;
+import net.arcanamod.systems.research.impls.StringSection;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.ListNBT;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 /**
  * Represents one section of content - for example, continuous text, an image, or an inline recipe. May provide a number of pins.

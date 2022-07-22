@@ -1,17 +1,16 @@
 package net.arcanamod.network;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
+
 import net.arcanamod.items.MagicDeviceItem;
-import net.arcanamod.items.WandItem;
 import net.arcanamod.items.attachment.FocusItem;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.Hand;
 import net.minecraftforge.fml.network.NetworkEvent;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Supplier;
 
 public class PkSwapFocus{
 	

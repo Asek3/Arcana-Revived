@@ -1,9 +1,10 @@
 package net.arcanamod.mixin;
 
-import net.arcanamod.entities.TaintedGooWrapper;
-import net.minecraft.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
+
+import net.arcanamod.entities.TaintedGooWrapper;
+import net.minecraft.entity.LivingEntity;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin implements TaintedGooWrapper {

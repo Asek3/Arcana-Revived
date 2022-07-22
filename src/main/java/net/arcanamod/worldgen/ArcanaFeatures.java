@@ -1,5 +1,8 @@
 package net.arcanamod.worldgen;
 
+import static net.arcanamod.Arcana.MODID;
+import static net.arcanamod.Arcana.arcLoc;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.worldgen.trees.features.GreatwoodFoliagePlacer;
 import net.arcanamod.worldgen.trees.features.SilverwoodFoliagePlacer;
@@ -18,9 +21,6 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.arcanamod.Arcana.MODID;
-import static net.arcanamod.Arcana.arcLoc;
 
 @Mod.EventBusSubscriber(modid = Arcana.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ArcanaFeatures{

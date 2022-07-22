@@ -1,18 +1,17 @@
 package net.arcanamod.systems.research.impls;
 
+import java.util.Optional;
+import java.util.stream.Stream;
+
 import net.arcanamod.systems.research.EntrySection;
 import net.arcanamod.systems.research.Icon;
 import net.arcanamod.systems.research.Pin;
 import net.arcanamod.systems.research.ResearchEntry;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-
-import java.util.Optional;
-import java.util.stream.Stream;
 
 public abstract class AbstractCraftingSection extends EntrySection{
 	

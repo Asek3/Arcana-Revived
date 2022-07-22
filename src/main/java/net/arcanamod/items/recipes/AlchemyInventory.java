@@ -1,5 +1,9 @@
 package net.arcanamod.items.recipes;
 
+import java.util.Map;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
@@ -7,9 +11,6 @@ import net.arcanamod.blocks.tiles.CrucibleTileEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Map;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault

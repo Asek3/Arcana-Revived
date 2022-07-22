@@ -1,5 +1,11 @@
 package net.arcanamod.compat;
 
+import static net.arcanamod.ArcanaVariables.arcLoc;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.registration.IModIngredientRegistration;
@@ -9,19 +15,18 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.blocks.ArcanaBlocks;
-import net.arcanamod.compat.jei.*;
+import net.arcanamod.compat.jei.AlchemyCategory;
+import net.arcanamod.compat.jei.ArcaneCraftingCategory;
+import net.arcanamod.compat.jei.AspectCrystallizerCategory;
+import net.arcanamod.compat.jei.AspectCrystallizerRecipeHandler;
+import net.arcanamod.compat.jei.AspectIngredient;
+import net.arcanamod.compat.jei.CrystalStudyCategory;
+import net.arcanamod.compat.jei.DummyRecipe;
 import net.arcanamod.items.ArcanaItems;
 import net.arcanamod.items.recipes.AlchemyRecipe;
 import net.arcanamod.items.recipes.ArcaneCraftingShapedRecipe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
 
 @JeiPlugin
 public class ArcanaJeiPlugin implements IModPlugin {

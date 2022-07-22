@@ -1,6 +1,7 @@
 package net.arcanamod.client.render.tainted;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.entities.tainted.TaintedSlimeEntity;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -8,7 +9,6 @@ import net.minecraft.client.renderer.entity.EntityRendererManager;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.client.renderer.entity.layers.SlimeGelLayer;
 import net.minecraft.client.renderer.entity.model.SlimeModel;
-import net.minecraft.entity.monster.SlimeEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.api.distmarker.Dist;

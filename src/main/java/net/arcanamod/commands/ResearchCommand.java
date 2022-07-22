@@ -1,28 +1,29 @@
 package net.arcanamod.commands;
 
+import static net.minecraft.command.Commands.argument;
+import static net.minecraft.command.Commands.literal;
+import static net.minecraft.command.arguments.ResourceLocationArgument.resourceLocation;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.Message;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
+
+import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.network.Connection;
 import net.arcanamod.network.PkModifyResearch;
 import net.arcanamod.systems.research.ResearchBooks;
 import net.arcanamod.systems.research.ResearchEntry;
-import net.arcanamod.capabilities.Researcher;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.ISuggestionProvider;
 import net.minecraft.command.arguments.EntityArgument;
 import net.minecraft.command.arguments.ResourceLocationArgument;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.concurrent.atomic.AtomicInteger;
-
-import static net.minecraft.command.Commands.argument;
-import static net.minecraft.command.Commands.literal;
-import static net.minecraft.command.arguments.ResourceLocationArgument.resourceLocation;
 
 public class ResearchCommand{
 	

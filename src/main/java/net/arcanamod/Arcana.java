@@ -1,5 +1,12 @@
 package net.arcanamod;
 
+import static net.minecraft.block.RotatedPillarBlock.AXIS;
+
+import javax.annotation.Nonnull;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.ItemAspectRegistry;
@@ -21,7 +28,11 @@ import net.arcanamod.items.ArcanaItems;
 import net.arcanamod.items.WandItem;
 import net.arcanamod.items.recipes.ArcanaRecipes;
 import net.arcanamod.network.Connection;
-import net.arcanamod.systems.research.*;
+import net.arcanamod.systems.research.BackgroundLayer;
+import net.arcanamod.systems.research.EntrySection;
+import net.arcanamod.systems.research.Puzzle;
+import net.arcanamod.systems.research.Requirement;
+import net.arcanamod.systems.research.ResearchLoader;
 import net.arcanamod.systems.taint.Taint;
 import net.arcanamod.util.AuthorisationManager;
 import net.arcanamod.world.NodeType;
@@ -46,7 +57,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
-import net.minecraftforge.common.extensions.IForgeBlockState;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -60,12 +70,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import javax.annotation.Nonnull;
-
-import static net.minecraft.block.RotatedPillarBlock.AXIS;
 
 /**
  * Base Arcana Class

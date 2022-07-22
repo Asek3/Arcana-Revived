@@ -1,9 +1,9 @@
 package net.arcanamod.client.gui;
 
-import net.arcanamod.aspects.Aspect;
-
 import static java.lang.Math.max;
 import static java.lang.Math.min;
+
+import net.arcanamod.aspects.Aspect;
 
 public final class UiUtil {
 	

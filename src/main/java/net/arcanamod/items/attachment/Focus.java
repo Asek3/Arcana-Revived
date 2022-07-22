@@ -1,18 +1,17 @@
 package net.arcanamod.items.attachment;
 
-import net.arcanamod.Arcana;
-import net.arcanamod.systems.spell.Spell;
-import net.arcanamod.systems.spell.casts.ICast;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.ToIntFunction;
+
+import net.arcanamod.Arcana;
+import net.arcanamod.systems.spell.Spell;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
 
 /**
  *

@@ -1,5 +1,7 @@
 package net.arcanamod.aspects.handlers;
 
+import javax.annotation.Nullable;
+
 import net.arcanamod.Arcana;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.INBT;
@@ -8,8 +10,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
-
-import javax.annotation.Nullable;
 
 public class AspectHandlerCapability {
 

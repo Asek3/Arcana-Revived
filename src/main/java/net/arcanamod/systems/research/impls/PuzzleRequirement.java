@@ -1,5 +1,7 @@
 package net.arcanamod.systems.research.impls;
 
+import static net.arcanamod.Arcana.arcLoc;
+
 import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.network.Connection;
 import net.arcanamod.systems.research.Puzzle;
@@ -9,8 +11,6 @@ import net.arcanamod.systems.research.ResearchEntry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 public class PuzzleRequirement extends Requirement{
 	

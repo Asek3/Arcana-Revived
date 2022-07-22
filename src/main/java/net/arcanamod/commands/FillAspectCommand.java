@@ -1,10 +1,18 @@
 package net.arcanamod.commands;
 
+import static net.minecraft.command.Commands.argument;
+import static net.minecraft.command.Commands.literal;
+import static net.minecraft.command.arguments.ResourceLocationArgument.resourceLocation;
+
+import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
+
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.IntegerArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.suggestion.SuggestionProvider;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.AspectUtils;
@@ -20,13 +28,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.Arrays;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import static net.minecraft.command.Commands.argument;
-import static net.minecraft.command.Commands.literal;
-import static net.minecraft.command.arguments.ResourceLocationArgument.resourceLocation;
 
 public class FillAspectCommand {
 	private static final SuggestionProvider<CommandSource> SUGGEST_FILL_CONTAINER = (ctx, builder) -> ISuggestionProvider.func_212476_a(Arrays.stream(AspectUtils.primalAspects).map(Aspect::toResourceLocation), builder);

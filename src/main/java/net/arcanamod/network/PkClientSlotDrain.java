@@ -1,5 +1,10 @@
 package net.arcanamod.network;
 
+import java.util.function.Supplier;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.containers.AspectContainer;
@@ -7,10 +12,6 @@ import net.arcanamod.containers.slots.AspectSlot;
 import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.function.Supplier;
 
 public class PkClientSlotDrain {
 

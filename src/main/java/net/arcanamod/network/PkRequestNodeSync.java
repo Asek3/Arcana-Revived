@@ -1,13 +1,13 @@
 package net.arcanamod.network;
 
+import java.util.function.Supplier;
+
 import net.arcanamod.capabilities.AuraChunk;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkStatus;
 import net.minecraftforge.fml.network.NetworkEvent;
-
-import java.util.function.Supplier;
 
 public class PkRequestNodeSync{
 	

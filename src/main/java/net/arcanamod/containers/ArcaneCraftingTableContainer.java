@@ -1,11 +1,15 @@
 package net.arcanamod.containers;
 
+import java.util.Optional;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.containers.slots.AspectCraftingResultSlot;
 import net.arcanamod.containers.slots.IWandSlotListener;
 import net.arcanamod.containers.slots.WandSlot;
-import net.arcanamod.items.recipes.AspectCraftingInventory;
 import net.arcanamod.items.recipes.ArcanaRecipes;
+import net.arcanamod.items.recipes.AspectCraftingInventory;
 import net.arcanamod.items.recipes.IArcaneCraftingRecipe;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -17,12 +21,13 @@ import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.RecipeBookContainer;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.*;
+import net.minecraft.item.crafting.ICraftingRecipe;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.IRecipeType;
+import net.minecraft.item.crafting.RecipeBookCategory;
+import net.minecraft.item.crafting.RecipeItemHelper;
 import net.minecraft.network.play.server.SSetSlotPacket;
 import net.minecraft.world.World;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Optional;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

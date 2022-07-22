@@ -1,16 +1,11 @@
 package net.arcanamod.network;
 
-import net.arcanamod.blocks.tiles.FociForgeTileEntity;
-import net.arcanamod.items.ArcanaItems;
-import net.minecraft.entity.player.ServerPlayerEntity;
+import java.util.function.Supplier;
+
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkEvent;
-
-import java.util.function.Supplier;
 
 public class PkWriteSpellToFoci {
 

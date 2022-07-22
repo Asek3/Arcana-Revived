@@ -1,8 +1,8 @@
 package net.arcanamod.aspects;
 
-import net.minecraft.util.Direction;
-
 import java.util.Random;
+
+import net.minecraft.util.Direction;
 
 public class AspectLabel {
     public Direction direction;

@@ -1,22 +1,26 @@
 package net.arcanamod.compat.jei;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+import javax.annotation.Nullable;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import mezz.jei.api.ingredients.IIngredientHelper;
 import mezz.jei.api.ingredients.IIngredientRenderer;
 import mezz.jei.api.ingredients.IIngredientType;
-import net.arcanamod.aspects.*;
+import net.arcanamod.aspects.Aspect;
+import net.arcanamod.aspects.AspectStack;
+import net.arcanamod.aspects.AspectUtils;
+import net.arcanamod.aspects.Aspects;
+import net.arcanamod.aspects.UndecidedAspectStack;
 import net.arcanamod.client.gui.ClientUiUtil;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TranslationTextComponent;
-
-import javax.annotation.Nullable;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
 
 public class AspectIngredient extends AspectStack implements Cloneable {
 	public static final IIngredientType<AspectIngredient> TYPE = () -> AspectIngredient.class;

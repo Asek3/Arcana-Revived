@@ -1,8 +1,12 @@
 package net.arcanamod.items;
 
+import static net.arcanamod.Arcana.arcLoc;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
-import net.arcanamod.systems.research.ResearchBooks;
 import net.arcanamod.capabilities.Researcher;
+import net.arcanamod.systems.research.ResearchBooks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
@@ -11,10 +15,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

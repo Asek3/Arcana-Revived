@@ -1,5 +1,13 @@
 package net.arcanamod.items;
 
+import static net.arcanamod.Arcana.MODID;
+import static net.arcanamod.Arcana.arcLoc;
+import static net.arcanamod.util.annotations.GIM.Type.ITEM;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Collectors;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaSounds;
 import net.arcanamod.aspects.AspectStack;
@@ -7,7 +15,6 @@ import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.effects.ArcanaEffects;
-import net.arcanamod.entities.ArcanaEntities;
 import net.arcanamod.items.armor.ArcanaArmourMaterials;
 import net.arcanamod.items.armor.AutoRepairArmorItem;
 import net.arcanamod.items.armor.GogglesItem;
@@ -16,27 +23,38 @@ import net.arcanamod.items.attachment.Core;
 import net.arcanamod.items.attachment.CoreItem;
 import net.arcanamod.items.attachment.FocusItem;
 import net.arcanamod.items.settings.GogglePriority;
-import net.arcanamod.items.tools.*;
+import net.arcanamod.items.tools.ArcanaToolTiers;
+import net.arcanamod.items.tools.AutoRepairAxeItem;
+import net.arcanamod.items.tools.AutoRepairHoeItem;
+import net.arcanamod.items.tools.AutoRepairPickaxeItem;
+import net.arcanamod.items.tools.AutoRepairShovelItem;
+import net.arcanamod.items.tools.AutoRepairSwordItem;
+import net.arcanamod.items.tools.SilverAxeItem;
+import net.arcanamod.items.tools.SilverHoeItem;
+import net.arcanamod.items.tools.SilverPickaxeItem;
+import net.arcanamod.items.tools.SilverShovelItem;
+import net.arcanamod.items.tools.SilverSwordItem;
 import net.arcanamod.systems.spell.MDModifier;
 import net.arcanamod.util.annotations.GIM;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.AxeItem;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Food;
+import net.minecraft.item.HoeItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
+import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.Rarity;
+import net.minecraft.item.ShovelItem;
+import net.minecraft.item.SnowballItem;
+import net.minecraft.item.SwordItem;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.stream.Collectors;
-
-import static net.arcanamod.Arcana.MODID;
-import static net.arcanamod.Arcana.arcLoc;
-import static net.arcanamod.util.annotations.GIM.Type.ITEM;
 
 /**
  * Contains all items.

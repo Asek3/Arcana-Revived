@@ -1,15 +1,16 @@
 package net.arcanamod.items;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
-import net.arcanamod.ArcanaVariables;
-import net.arcanamod.aspects.Aspects;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.systems.spell.Spell;
 import net.arcanamod.systems.spell.casts.Cast;
 import net.arcanamod.systems.spell.casts.Casts;
-import net.arcanamod.systems.taint.Taint;
 import net.arcanamod.systems.spell.casts.ICast;
-import net.arcanamod.util.Pair;
+import net.arcanamod.systems.taint.Taint;
 import net.arcanamod.util.RayTraceUtils;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
@@ -22,11 +23,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

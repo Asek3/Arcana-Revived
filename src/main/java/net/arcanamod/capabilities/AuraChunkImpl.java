@@ -1,5 +1,10 @@
 package net.arcanamod.capabilities;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.annotation.Nonnull;
+
 import net.arcanamod.world.Node;
 import net.arcanamod.world.NodeType;
 import net.minecraft.nbt.CompoundNBT;
@@ -7,10 +12,6 @@ import net.minecraft.nbt.INBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraftforge.common.util.Constants;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.Collection;
 
 public class AuraChunkImpl implements AuraChunk{
 	

@@ -1,10 +1,10 @@
 package net.arcanamod.blocks.pipes;
 
+import javax.annotation.Nonnull;
+
 import net.arcanamod.aspects.AspectStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.Direction;
-
-import javax.annotation.Nonnull;
 
 public class AspectSpeck{
 	

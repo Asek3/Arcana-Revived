@@ -1,12 +1,12 @@
 package net.arcanamod.items;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.world.World;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 /**
  * Helper class that implements auto-repair functionality, used by void metal tools.

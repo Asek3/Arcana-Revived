@@ -1,16 +1,21 @@
 package net.arcanamod.systems.research;
 
-import net.arcanamod.systems.research.impls.*;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.registries.ForgeRegistries;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.function.Function;
+
+import net.arcanamod.systems.research.impls.ItemRequirement;
+import net.arcanamod.systems.research.impls.ItemTagRequirement;
+import net.arcanamod.systems.research.impls.PuzzleRequirement;
+import net.arcanamod.systems.research.impls.PuzzlesCompletedRequirement;
+import net.arcanamod.systems.research.impls.ResearchCompletedRequirement;
+import net.arcanamod.systems.research.impls.XpRequirement;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public abstract class Requirement{
 	

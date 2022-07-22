@@ -1,6 +1,14 @@
 package net.arcanamod.compat.jei;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
+import static net.arcanamod.ArcanaVariables.arcLoc;
+import static net.arcanamod.compat.ArcanaJeiPlugin.ALCHEMY_UUID;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -9,21 +17,11 @@ import mezz.jei.api.gui.ingredient.IGuiItemStackGroup;
 import mezz.jei.api.helpers.IJeiHelpers;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.items.recipes.AlchemyRecipe;
-import net.arcanamod.items.recipes.ArcaneCraftingShapedRecipe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
-
-import javax.annotation.Nonnull;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.stream.Collectors;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
-import static net.arcanamod.compat.ArcanaJeiPlugin.ALCHEMY_UUID;
 
 public class AlchemyCategory implements IRecipeCategory<AlchemyRecipe> {
 	private final IJeiHelpers jeiHelpers;

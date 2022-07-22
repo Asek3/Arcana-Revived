@@ -1,5 +1,7 @@
 package net.arcanamod.network;
 
+import java.util.function.Supplier;
+
 import net.arcanamod.items.ArcanaItems;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -8,8 +10,6 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkEvent;
-
-import java.util.function.Supplier;
 
 public class PkGetNote{
 	

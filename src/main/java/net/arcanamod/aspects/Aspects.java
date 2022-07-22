@@ -1,19 +1,21 @@
 package net.arcanamod.aspects;
 
-import com.google.common.collect.BiMap;
-import com.google.common.collect.HashBiMap;
-import net.arcanamod.systems.taint.Taint;
-import net.arcanamod.util.Pair;
-import net.minecraft.util.ResourceLocation;
+import static net.arcanamod.aspects.ColorRange.create;
+import static net.arcanamod.util.Pair.of;
 
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static net.arcanamod.aspects.ColorRange.create;
-import static net.arcanamod.util.Pair.of;
+import javax.annotation.Nullable;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+
+import net.arcanamod.systems.taint.Taint;
+import net.arcanamod.util.Pair;
+import net.minecraft.util.ResourceLocation;
 
 @SuppressWarnings("unused")
 public class Aspects{

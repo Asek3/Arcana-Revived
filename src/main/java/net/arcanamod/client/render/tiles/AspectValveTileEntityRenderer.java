@@ -1,8 +1,18 @@
 package net.arcanamod.client.render.tiles;
 
+import static net.minecraft.block.SixWayBlock.DOWN;
+import static net.minecraft.block.SixWayBlock.EAST;
+import static net.minecraft.block.SixWayBlock.NORTH;
+import static net.minecraft.block.SixWayBlock.SOUTH;
+import static net.minecraft.block.SixWayBlock.UP;
+import static net.minecraft.block.SixWayBlock.WEST;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.Arcana;
 import net.arcanamod.blocks.pipes.ValveTileEntity;
@@ -19,10 +29,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.TransformationMatrix;
 import net.minecraft.util.math.vector.Vector3f;
 import net.minecraftforge.client.model.ItemLayerModel;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.minecraft.block.SixWayBlock.*;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

@@ -1,18 +1,22 @@
 package net.arcanamod.util;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Predicate;
+
 import com.google.common.base.Predicates;
 import com.google.common.collect.Lists;
+
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.*;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.RayTraceContext;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Predicate;
 
 public final class RayTraceUtils {
 

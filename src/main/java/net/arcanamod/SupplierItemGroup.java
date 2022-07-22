@@ -1,11 +1,12 @@
 package net.arcanamod;
 
+import java.util.function.Supplier;
+
+import javax.annotation.Nonnull;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-
-import javax.annotation.Nonnull;
-import java.util.function.Supplier;
 
 public class SupplierItemGroup extends ItemGroup{
 

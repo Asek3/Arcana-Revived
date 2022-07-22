@@ -1,7 +1,16 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+import javax.annotation.Nonnull;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.client.gui.ClientUiUtil;
 import net.arcanamod.client.gui.ResearchEntryScreen;
@@ -16,13 +25,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.gui.GuiUtils;
-
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.Optional;
-
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
-import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
 
 public abstract class AbstractCraftingSectionRenderer<T extends AbstractCraftingSection> implements EntrySectionRenderer<T>{
 	

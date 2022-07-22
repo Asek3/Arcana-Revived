@@ -1,11 +1,11 @@
 package net.arcanamod.systems.research;
 
+import javax.annotation.Nullable;
+
 import net.arcanamod.systems.research.impls.AbstractCraftingSection;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
 
 /**
  * A quick reference to a specific page in a research book, which may point to an item's recipe.

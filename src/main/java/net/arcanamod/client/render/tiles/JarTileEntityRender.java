@@ -1,7 +1,12 @@
 package net.arcanamod.client.render.tiles;
 
+import java.awt.Color;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
@@ -16,9 +21,6 @@ import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.util.Direction;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.Quaternion;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.awt.*;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

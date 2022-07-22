@@ -1,6 +1,11 @@
 package net.arcanamod.client.render.particles;
 
+import java.util.function.Function;
+
+import javax.annotation.Nonnull;
+
 import com.mojang.serialization.Codec;
+
 import net.arcanamod.Arcana;
 import net.minecraft.particles.BlockParticleData;
 import net.minecraft.particles.IParticleData;
@@ -8,9 +13,6 @@ import net.minecraft.particles.ParticleType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.annotation.Nonnull;
-import java.util.function.Function;
 
 public class ArcanaParticles{
 	

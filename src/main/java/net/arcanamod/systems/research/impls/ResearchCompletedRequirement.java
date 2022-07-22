@@ -1,13 +1,13 @@
 package net.arcanamod.systems.research.impls;
 
+import static net.arcanamod.Arcana.arcLoc;
+
 import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.systems.research.Parent;
 import net.arcanamod.systems.research.Requirement;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 public class ResearchCompletedRequirement extends Requirement{
 	

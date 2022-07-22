@@ -1,10 +1,12 @@
 package net.arcanamod.items.attachment;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Optional;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.systems.spell.MDModifier;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.*;
 
 /**
  * Represents a type of wand core. Provides access to relevant stats, such as the core's

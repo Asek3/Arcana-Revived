@@ -1,5 +1,15 @@
 package net.arcanamod.world;
 
+import static com.google.common.collect.Streams.stream;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.blocks.DelegatingBlock;
@@ -22,11 +32,6 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.server.ChunkHolder;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.PacketDistributor;
-
-import java.util.*;
-import java.util.stream.Collectors;
-
-import static com.google.common.collect.Streams.stream;
 
 /**
  * A view of the nodes in the world for a particular tick.

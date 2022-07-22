@@ -1,16 +1,16 @@
 package net.arcanamod.commands;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 import net.arcanamod.world.AuraView;
 import net.arcanamod.world.Node;
 import net.arcanamod.world.ServerAuraView;
 import net.minecraft.command.CommandSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.vector.Vector3d;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.stream.Collectors;
 
 public class NodeSelector{
 	

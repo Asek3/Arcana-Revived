@@ -1,8 +1,16 @@
 package net.arcanamod.worldgen.trees.features;
 
+import static net.minecraft.world.gen.feature.Feature.isAirAt;
+
+import java.util.Random;
+import java.util.Set;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.datafixers.Products;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.worldgen.ArcanaFeatures;
 import net.minecraft.util.math.BlockPos;
@@ -12,12 +20,6 @@ import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Random;
-import java.util.Set;
-
-import static net.minecraft.world.gen.feature.Feature.isAirAt;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

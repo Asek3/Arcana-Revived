@@ -1,7 +1,18 @@
 package net.arcanamod.client.gui;
 
+import static net.arcanamod.Arcana.arcLoc;
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+import static net.arcanamod.client.gui.UiUtil.blue;
+import static net.arcanamod.client.gui.UiUtil.green;
+import static net.arcanamod.client.gui.UiUtil.red;
+
+import java.util.List;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.handlers.AspectHolder;
 import net.arcanamod.containers.AlembicContainer;
@@ -9,13 +20,6 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.List;
-
-import static net.arcanamod.Arcana.arcLoc;
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
-import static net.arcanamod.client.gui.UiUtil.*;
 
 @ParametersAreNonnullByDefault
 public class AlembicScreen extends ContainerScreen<AlembicContainer>{

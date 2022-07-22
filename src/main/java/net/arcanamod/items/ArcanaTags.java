@@ -1,10 +1,10 @@
 package net.arcanamod.items;
 
+import static net.arcanamod.Arcana.arcLoc;
+
 import net.minecraft.item.Item;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 public class ArcanaTags{
 	

@@ -1,22 +1,17 @@
 package net.arcanamod.client.gui;
 
+import static net.arcanamod.Arcana.MODID;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
-import net.arcanamod.Arcana;
+
 import net.arcanamod.client.ClientUtils;
-import net.minecraft.client.gui.AbstractGui;
 import net.minecraft.client.gui.screen.ConfirmOpenLinkScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import javax.annotation.Nullable;
-
-import static net.arcanamod.Arcana.MODID;
 
 public class ArcanaDevOptionsScreen extends Screen{
 	

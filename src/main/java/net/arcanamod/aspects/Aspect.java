@@ -1,12 +1,13 @@
 package net.arcanamod.aspects;
 
-import net.arcanamod.Arcana;
-import net.arcanamod.ArcanaVariables;
-import net.minecraft.util.ResourceLocation;
+import java.util.function.Consumer;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.function.Consumer;
+import net.arcanamod.Arcana;
+import net.arcanamod.ArcanaVariables;
+import net.minecraft.util.ResourceLocation;
 
 public class Aspect {
 	private static Logger logger = LogManager.getLogger();

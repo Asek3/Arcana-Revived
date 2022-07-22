@@ -1,16 +1,22 @@
 package net.arcanamod.util;
 
+import java.util.Set;
+import java.util.function.Predicate;
+
+import javax.annotation.Nullable;
+
 import com.google.common.collect.ImmutableSet;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.util.Direction;
-import net.minecraft.util.math.*;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.RayTraceContext;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
-
-import javax.annotation.Nullable;
-import java.util.Set;
-import java.util.function.Predicate;
 
 public class FluidRaytraceHelper {
 	public static RayTraceResult rayTrace(Entity projectile, boolean checkEntityCollision, boolean includeShooter, @Nullable Entity shooter, RayTraceContext.BlockMode blockModeIn) {

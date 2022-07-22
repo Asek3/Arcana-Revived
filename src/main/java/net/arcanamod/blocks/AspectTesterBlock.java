@@ -1,16 +1,21 @@
 package net.arcanamod.blocks;
 
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.arcanamod.blocks.tiles.AspectTesterTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.text.*;
+import net.minecraft.util.text.Color;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.Style;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockReader;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class AspectTesterBlock extends Block {
 	public AspectTesterBlock(Block.Properties properties) {

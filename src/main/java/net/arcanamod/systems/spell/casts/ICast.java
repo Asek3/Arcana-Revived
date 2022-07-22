@@ -1,14 +1,14 @@
 package net.arcanamod.systems.spell.casts;
 
+import java.util.Optional;
+import java.util.UUID;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.util.Pair;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
-
-import java.util.Optional;
-import java.util.UUID;
 
 /**
  * The ISpell Class

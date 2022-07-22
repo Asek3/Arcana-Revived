@@ -1,9 +1,9 @@
 package net.arcanamod.systems.spell;
 
+import java.util.HashMap;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
-
-import java.util.HashMap;
 
 public class SpellValues {
 	public static final HashMap<Aspect, Integer> modifierValues = new HashMap<>();

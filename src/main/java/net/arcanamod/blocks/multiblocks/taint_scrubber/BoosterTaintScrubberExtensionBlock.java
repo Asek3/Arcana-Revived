@@ -1,5 +1,7 @@
 package net.arcanamod.blocks.multiblocks.taint_scrubber;
 
+import javax.annotation.Nonnull;
+
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,8 +15,6 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
 
 @SuppressWarnings("deprecation")
 public class BoosterTaintScrubberExtensionBlock extends Block implements ITaintScrubberExtension{

@@ -1,9 +1,9 @@
 package net.arcanamod.systems.spell;
 
+import java.util.Optional;
+
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.text.ITextComponent;
-
-import java.util.Optional;
 
 public interface ISpell{
 	/**

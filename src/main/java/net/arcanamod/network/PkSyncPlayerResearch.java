@@ -1,14 +1,15 @@
 package net.arcanamod.network;
 
+import java.util.function.Supplier;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.capabilities.Researcher;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.function.Supplier;
 
 /**
  * Syncs the player's progress through research. Not to be confused with {@link PkSyncResearch}, which syncs all existing research.

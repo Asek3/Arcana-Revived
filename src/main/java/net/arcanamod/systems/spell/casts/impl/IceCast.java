@@ -1,5 +1,7 @@
 package net.arcanamod.systems.spell.casts.impl;
 
+import static net.arcanamod.aspects.Aspects.ICE;
+
 import net.arcanamod.ArcanaVariables;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
@@ -15,8 +17,6 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import static net.arcanamod.aspects.Aspects.ICE;
 
 public class IceCast extends Cast {
 	@Override

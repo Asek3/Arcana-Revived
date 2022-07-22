@@ -1,5 +1,7 @@
 package net.arcanamod.systems.spell.casts.impl;
 
+import java.util.HashMap;
+
 import net.arcanamod.ArcanaVariables;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
@@ -25,8 +27,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
-
-import java.util.HashMap;
 
 public class MiningCast extends Cast {
 

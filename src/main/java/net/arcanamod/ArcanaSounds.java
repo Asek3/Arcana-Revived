@@ -1,5 +1,15 @@
 package net.arcanamod;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.reflect.Field;
+import java.util.Locale;
+import java.util.Random;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
@@ -8,15 +18,6 @@ import net.minecraft.util.SoundEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ObjectHolderRegistry;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-import java.lang.reflect.Field;
-import java.util.Locale;
-import java.util.Random;
 
 @SuppressWarnings({"ConstantConditions", "DanglingJavadoc"})
 /**

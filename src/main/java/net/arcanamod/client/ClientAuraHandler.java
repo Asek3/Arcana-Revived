@@ -1,9 +1,16 @@
 package net.arcanamod.client;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.List;
+import java.util.concurrent.ConcurrentSkipListSet;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 import net.arcanamod.network.Connection;
 import net.arcanamod.network.PkRequestNodeSync;
-import net.arcanamod.world.ClientAuraView;
 import net.arcanamod.world.AuraView;
+import net.arcanamod.world.ClientAuraView;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.util.math.ChunkPos;
@@ -12,13 +19,6 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.world.ChunkEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.List;
-import java.util.concurrent.ConcurrentSkipListSet;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 @Mod.EventBusSubscriber(Dist.CLIENT)
 public class ClientAuraHandler{

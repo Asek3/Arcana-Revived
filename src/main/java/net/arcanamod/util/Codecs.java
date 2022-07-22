@@ -1,15 +1,14 @@
 package net.arcanamod.util;
 
+import java.util.UUID;
+
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+
 import net.arcanamod.aspects.Aspect;
-import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.aspects.Aspects;
-import net.arcanamod.client.render.particles.NodeParticleData;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.Vector3d;
-
-import java.util.UUID;
 
 public final class Codecs{
 	

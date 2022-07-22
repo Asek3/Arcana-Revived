@@ -1,15 +1,16 @@
 package net.arcanamod.systems.research;
 
-import com.google.gson.JsonObject;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.arcanamod.systems.research.impls.ImageLayer;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
-
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Supplier;
+
+import com.google.gson.JsonObject;
+import com.mojang.blaze3d.matrix.MatrixStack;
+
+import net.arcanamod.systems.research.impls.ImageLayer;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.util.ResourceLocation;
 
 public abstract class BackgroundLayer{
 	

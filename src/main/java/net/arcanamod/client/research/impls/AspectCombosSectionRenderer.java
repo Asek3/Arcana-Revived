@@ -1,6 +1,14 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
+import static net.arcanamod.client.gui.ResearchEntryScreen.PAGE_X;
+import static net.arcanamod.client.gui.ResearchEntryScreen.PAGE_Y;
+import static net.arcanamod.client.gui.ResearchEntryScreen.RIGHT_X_OFFSET;
+
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.client.gui.ClientUiUtil;
@@ -12,10 +20,6 @@ import net.arcanamod.systems.research.impls.AspectCombosSection;
 import net.arcanamod.util.Pair;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.List;
-
-import static net.arcanamod.client.gui.ResearchEntryScreen.*;
 
 public class AspectCombosSectionRenderer implements EntrySectionRenderer<AspectCombosSection>{
 	

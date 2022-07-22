@@ -1,5 +1,15 @@
 package net.arcanamod.blocks.tiles;
 
+import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableComponentBlock.PAPER;
+import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableCoreBlock.FACING;
+import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableCoreBlock.INK;
+
+import java.util.ArrayList;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import io.netty.buffer.Unpooled;
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.aspects.VisShareable;
@@ -24,15 +34,6 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.ArrayList;
-
-import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableComponentBlock.PAPER;
-import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableCoreBlock.FACING;
-import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableCoreBlock.INK;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

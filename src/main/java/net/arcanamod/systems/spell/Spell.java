@@ -1,5 +1,17 @@
 package net.arcanamod.systems.spell;
 
+import static net.arcanamod.util.Pair.of;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+import javax.annotation.Nullable;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.client.gui.UiUtil;
@@ -9,22 +21,18 @@ import net.arcanamod.systems.spell.casts.Casts;
 import net.arcanamod.systems.spell.casts.ICast;
 import net.arcanamod.systems.spell.modules.SpellModule;
 import net.arcanamod.systems.spell.modules.circle.DoubleModifierCircle;
-import net.arcanamod.systems.spell.modules.core.*;
+import net.arcanamod.systems.spell.modules.core.CastCircle;
+import net.arcanamod.systems.spell.modules.core.CastMethod;
+import net.arcanamod.systems.spell.modules.core.CastMethodSin;
+import net.arcanamod.systems.spell.modules.core.Connector;
+import net.arcanamod.systems.spell.modules.core.StartCircle;
 import net.arcanamod.util.Pair;
-import net.minecraft.crash.CrashReport;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.Hand;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import javax.annotation.Nullable;
-import java.util.*;
-
-import static net.arcanamod.util.Pair.of;
 
 /**
  * Spell is made of SpellModules that are bound together.

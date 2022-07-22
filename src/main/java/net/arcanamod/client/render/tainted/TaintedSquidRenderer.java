@@ -1,6 +1,11 @@
 package net.arcanamod.client.render.tainted;
 
+import static net.arcanamod.Arcana.arcLoc;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.client.model.tainted.TaintedSquidModel;
 import net.arcanamod.entities.tainted.TaintedSquidEntity;
@@ -9,10 +14,6 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3f;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

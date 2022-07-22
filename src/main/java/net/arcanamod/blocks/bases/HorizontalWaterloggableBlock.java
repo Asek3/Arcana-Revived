@@ -1,5 +1,7 @@
 package net.arcanamod.blocks.bases;
 
+import javax.annotation.Nonnull;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItemUseContext;
@@ -9,8 +11,6 @@ import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-
-import javax.annotation.Nonnull;
 
 @SuppressWarnings("deprecation")
 public class HorizontalWaterloggableBlock extends WaterloggableBlock{

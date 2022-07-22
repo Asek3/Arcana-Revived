@@ -1,5 +1,10 @@
 package net.arcanamod.blocks.multiblocks.taint_scrubber;
 
+import static net.arcanamod.blocks.DelegatingBlock.switchBlock;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.arcanamod.aspects.VisShareable;
 import net.arcanamod.aspects.handlers.AspectBattery;
 import net.arcanamod.aspects.handlers.AspectHandler;
@@ -18,11 +23,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import static net.arcanamod.blocks.DelegatingBlock.switchBlock;
 
 public class TaintScrubberBlock extends Block implements ITaintScrubberExtension{
 	

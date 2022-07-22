@@ -1,5 +1,9 @@
 package net.arcanamod.containers.slots;
 
+import java.util.Optional;
+
+import javax.annotation.Nullable;
+
 import net.arcanamod.aspects.UndecidedAspectStack;
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.aspects.handlers.AspectHolder;
@@ -13,9 +17,6 @@ import net.minecraft.inventory.container.CraftingResultSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipeType;
 import net.minecraft.util.NonNullList;
-
-import javax.annotation.Nullable;
-import java.util.Optional;
 
 public class AspectCraftingResultSlot extends CraftingResultSlot{
 	private final AspectCraftingInventory craftMatrix;

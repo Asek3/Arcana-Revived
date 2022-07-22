@@ -1,5 +1,9 @@
 package net.arcanamod.datagen;
 
+import java.lang.reflect.Field;
+
+import javax.annotation.Nonnull;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.util.annotations.AnnotationUtil;
@@ -10,9 +14,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.fml.RegistryObject;
-
-import javax.annotation.Nonnull;
-import java.lang.reflect.Field;
 
 public class ItemModels extends ItemModelProvider{
 	

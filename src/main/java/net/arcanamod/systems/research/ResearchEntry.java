@@ -1,10 +1,6 @@
 package net.arcanamod.systems.research;
 
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.ListNBT;
-import net.minecraft.nbt.StringNBT;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.World;
+import static net.arcanamod.util.StreamUtils.streamAndApply;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,7 +8,11 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static net.arcanamod.util.StreamUtils.streamAndApply;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.ListNBT;
+import net.minecraft.nbt.StringNBT;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 /**
  * Represents a node in the research tree. Stores an ordered list of entry sections representing its content.

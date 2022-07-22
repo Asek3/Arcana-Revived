@@ -1,14 +1,15 @@
 package net.arcanamod.capabilities;
 
+import java.util.Collection;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.arcanamod.world.Node;
 import net.arcanamod.world.NodeType;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.Collection;
 
 /**
  * Allows access to this chunk's nodes and taint level.

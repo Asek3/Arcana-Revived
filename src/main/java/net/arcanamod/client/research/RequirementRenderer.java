@@ -1,16 +1,27 @@
 package net.arcanamod.client.research;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.arcanamod.client.research.impls.*;
-import net.arcanamod.systems.research.impls.*;
-import net.arcanamod.systems.research.Requirement;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.ITextComponent;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import com.mojang.blaze3d.matrix.MatrixStack;
+
+import net.arcanamod.client.research.impls.ItemRequirementRenderer;
+import net.arcanamod.client.research.impls.ItemTagRequirementRenderer;
+import net.arcanamod.client.research.impls.PuzzleRequirementRenderer;
+import net.arcanamod.client.research.impls.PuzzlesCompletedRequirementRenderer;
+import net.arcanamod.client.research.impls.ResearchCompletedRequirementRenderer;
+import net.arcanamod.client.research.impls.XpRequirementRenderer;
+import net.arcanamod.systems.research.Requirement;
+import net.arcanamod.systems.research.impls.ItemRequirement;
+import net.arcanamod.systems.research.impls.ItemTagRequirement;
+import net.arcanamod.systems.research.impls.PuzzleRequirement;
+import net.arcanamod.systems.research.impls.PuzzlesCompletedRequirement;
+import net.arcanamod.systems.research.impls.ResearchCompletedRequirement;
+import net.arcanamod.systems.research.impls.XpRequirement;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
 
 public interface RequirementRenderer<T extends Requirement>{
 	

@@ -1,9 +1,5 @@
 package net.arcanamod.util;
 
-import net.minecraft.nbt.INBT;
-import net.minecraft.nbt.ListNBT;
-
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -12,6 +8,11 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
+
+import javax.annotation.Nullable;
+
+import net.minecraft.nbt.INBT;
+import net.minecraft.nbt.ListNBT;
 
 public final class StreamUtils{
 	

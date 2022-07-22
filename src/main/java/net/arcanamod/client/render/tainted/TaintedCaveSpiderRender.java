@@ -1,6 +1,7 @@
 package net.arcanamod.client.render.tainted;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.entities.tainted.TaintedCaveSpiderEntity;
 import net.minecraft.client.renderer.entity.EntityRendererManager;

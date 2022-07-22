@@ -1,25 +1,31 @@
 package net.arcanamod.systems.spell.modules;
 
-import com.google.common.collect.Maps;
-import com.mojang.blaze3d.matrix.MatrixStack;
-import net.arcanamod.aspects.Aspect;
-import net.arcanamod.systems.spell.SpellState;
-import net.arcanamod.systems.spell.modules.circle.DoubleModifierCircle;
-import net.arcanamod.systems.spell.modules.circle.SinModifierCircle;
-import net.arcanamod.systems.spell.modules.circle.SingleModifierCircle;
-import net.arcanamod.systems.spell.modules.core.*;
-import net.minecraft.client.renderer.ItemRenderer;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.INBT;
-import net.minecraft.nbt.ListNBT;
-
-import java.awt.*;
+import java.awt.Point;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Objects;
+
+import com.google.common.collect.Maps;
+import com.mojang.blaze3d.matrix.MatrixStack;
+
+import net.arcanamod.aspects.Aspect;
+import net.arcanamod.systems.spell.SpellState;
+import net.arcanamod.systems.spell.modules.circle.DoubleModifierCircle;
+import net.arcanamod.systems.spell.modules.circle.SinModifierCircle;
+import net.arcanamod.systems.spell.modules.circle.SingleModifierCircle;
+import net.arcanamod.systems.spell.modules.core.CastCircle;
+import net.arcanamod.systems.spell.modules.core.CastMethod;
+import net.arcanamod.systems.spell.modules.core.CastMethodSin;
+import net.arcanamod.systems.spell.modules.core.CommentBlock;
+import net.arcanamod.systems.spell.modules.core.Connector;
+import net.arcanamod.systems.spell.modules.core.StartCircle;
+import net.minecraft.client.renderer.ItemRenderer;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.INBT;
+import net.minecraft.nbt.ListNBT;
 
 public abstract class SpellModule {
 	public static HashMap<String, Class<? extends SpellModule>> modules = Maps.newHashMap();

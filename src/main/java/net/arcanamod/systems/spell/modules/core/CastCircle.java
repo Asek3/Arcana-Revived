@@ -1,6 +1,9 @@
 package net.arcanamod.systems.spell.modules.core;
 
+import java.awt.Point;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.aspects.Aspects;
@@ -15,8 +18,6 @@ import net.arcanamod.systems.spell.modules.circle.SingleModifierCircle;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
-
-import java.awt.*;
 
 public class CastCircle extends SpellModule {
 	public ICast cast = null;

@@ -1,5 +1,9 @@
 package net.arcanamod.entities;
 
+import static net.arcanamod.systems.taint.Taint.UNTAINTED;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.blocks.DelegatingBlock;
 import net.arcanamod.items.ArcanaItems;
@@ -16,10 +20,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.systems.taint.Taint.UNTAINTED;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault

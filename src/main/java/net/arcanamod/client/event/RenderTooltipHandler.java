@@ -1,6 +1,11 @@
 package net.arcanamod.client.event;
 
+import java.util.List;
+
+import javax.annotation.Nonnull;
+
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.ItemAspectRegistry;
 import net.arcanamod.client.gui.ClientUiUtil;
@@ -13,9 +18,6 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import javax.annotation.Nonnull;
-import java.util.List;
 
 @Mod.EventBusSubscriber(Dist.CLIENT)
 public class RenderTooltipHandler {

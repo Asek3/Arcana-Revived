@@ -1,12 +1,12 @@
 package net.arcanamod.client.model.tainted;
 
+import java.util.Arrays;
+
 import com.google.common.collect.ImmutableList;
+
 import net.arcanamod.entities.tainted.TaintedSquidEntity;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.Entity;
-
-import java.util.Arrays;
 
 public class TaintedSquidModel<T extends TaintedSquidEntity> extends SegmentedModel<T> {
 	private final ModelRenderer body;

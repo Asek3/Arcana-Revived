@@ -1,9 +1,9 @@
 package net.arcanamod.systems.spell;
 
+import java.util.List;
+
 import net.arcanamod.aspects.AspectStack;
 import net.minecraft.entity.player.PlayerEntity;
-
-import java.util.List;
 
 public class MDModifier {
 	public static class Empty extends MDModifier {}

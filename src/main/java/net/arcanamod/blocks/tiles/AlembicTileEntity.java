@@ -1,5 +1,11 @@
 package net.arcanamod.blocks.tiles;
 
+import static net.arcanamod.aspects.Aspects.EMPTY;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.Aspect;
@@ -33,12 +39,6 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.aspects.Aspects.EMPTY;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

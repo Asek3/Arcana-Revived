@@ -1,9 +1,12 @@
 package net.arcanamod.network;
 
+import static net.arcanamod.Arcana.arcLoc;
+
+import javax.annotation.Nonnull;
+
 import net.arcanamod.aspects.Aspect;
-import net.arcanamod.blocks.tiles.FociForgeTileEntity;
-import net.arcanamod.containers.AspectContainer;
 import net.arcanamod.capabilities.Researcher;
+import net.arcanamod.containers.AspectContainer;
 import net.arcanamod.systems.research.Pin;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -12,10 +15,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.PacketDistributor;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
-
-import javax.annotation.Nonnull;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 public class Connection{
 	

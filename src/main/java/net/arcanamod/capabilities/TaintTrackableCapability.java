@@ -1,5 +1,10 @@
 package net.arcanamod.capabilities;
 
+import static net.arcanamod.Arcana.arcLoc;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.INBT;
 import net.minecraft.util.Direction;
@@ -9,11 +14,6 @@ import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.common.util.LazyOptional;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 public class TaintTrackableCapability{
 	

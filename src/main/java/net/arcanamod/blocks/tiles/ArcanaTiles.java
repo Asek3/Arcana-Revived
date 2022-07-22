@@ -1,6 +1,7 @@
 package net.arcanamod.blocks.tiles;
 
 import com.google.common.collect.Sets;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.pipes.PipeWindowTileEntity;

@@ -1,6 +1,17 @@
 package net.arcanamod.systems.taint;
 
+import static net.arcanamod.blocks.DelegatingBlock.switchBlock;
+import static net.minecraft.entity.EntityClassification.MONSTER;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.stream.Collectors;
+
 import com.google.common.collect.Lists;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.VisShareable;
@@ -8,13 +19,36 @@ import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.DeadBlock;
 import net.arcanamod.blocks.DeadPlantBlock;
 import net.arcanamod.blocks.TaintedBlock;
-import net.arcanamod.blocks.tainted.*;
+import net.arcanamod.blocks.tainted.TaintedFallingBlock;
+import net.arcanamod.blocks.tainted.TaintedPlantBlock;
+import net.arcanamod.blocks.tainted.TaintedSaplingBlock;
+import net.arcanamod.blocks.tainted.TaintedSlabBlock;
+import net.arcanamod.blocks.tainted.TaintedStairsBlock;
+import net.arcanamod.blocks.tainted.TaintedVineBlock;
 import net.arcanamod.blocks.tiles.JarTileEntity;
-import net.arcanamod.entities.tainted.*;
+import net.arcanamod.entities.tainted.TaintedCaveSpiderEntity;
+import net.arcanamod.entities.tainted.TaintedDonkeyEntity;
+import net.arcanamod.entities.tainted.TaintedEntity;
+import net.arcanamod.entities.tainted.TaintedGhastEntity;
+import net.arcanamod.entities.tainted.TaintedPandaEntity;
+import net.arcanamod.entities.tainted.TaintedPolarBearEntity;
+import net.arcanamod.entities.tainted.TaintedRabbitEntity;
+import net.arcanamod.entities.tainted.TaintedSkeletonEntity;
+import net.arcanamod.entities.tainted.TaintedSlimeEntity;
+import net.arcanamod.entities.tainted.TaintedSnowGolemEntity;
+import net.arcanamod.entities.tainted.TaintedSquidEntity;
 import net.arcanamod.fluids.ArcanaFluids;
 import net.arcanamod.world.AuraView;
 import net.arcanamod.world.ServerAuraView;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FallingBlock;
+import net.minecraft.block.IGrowable;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SlabBlock;
+import net.minecraft.block.StairsBlock;
+import net.minecraft.block.VineBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.IShearable;
@@ -28,12 +62,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IPlantable;
-
-import java.util.*;
-import java.util.stream.Collectors;
-
-import static net.arcanamod.blocks.DelegatingBlock.switchBlock;
-import static net.minecraft.entity.EntityClassification.MONSTER;
 
 public class Taint{
 

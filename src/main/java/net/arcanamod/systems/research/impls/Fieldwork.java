@@ -1,6 +1,11 @@
 package net.arcanamod.systems.research.impls;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Supplier;
+
 import com.google.gson.JsonObject;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.containers.ResearchTableContainer;
@@ -10,10 +15,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.function.Supplier;
 
 public class Fieldwork extends Puzzle{
 	

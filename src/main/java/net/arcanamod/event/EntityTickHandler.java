@@ -1,9 +1,14 @@
 package net.arcanamod.event;
 
+import static net.arcanamod.ArcanaVariables.arcLoc;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import com.google.common.collect.Sets;
+
 import net.arcanamod.ArcanaConfig;
-import net.arcanamod.ArcanaSounds;
-import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.capabilities.TaintTrackable;
 import net.arcanamod.effects.ArcanaEffects;
 import net.arcanamod.items.ArcanaItems;
@@ -12,7 +17,6 @@ import net.arcanamod.systems.spell.casts.ToggleableCast;
 import net.arcanamod.systems.taint.Taint;
 import net.arcanamod.world.AuraView;
 import net.arcanamod.world.Node;
-import net.arcanamod.world.NodeType;
 import net.arcanamod.world.ServerAuraView;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.entity.LivingEntity;
@@ -23,7 +27,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -33,12 +36,6 @@ import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
 
 @Mod.EventBusSubscriber
 public class EntityTickHandler{

@@ -1,5 +1,12 @@
 package net.arcanamod.items;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.items.attachment.Cap;
 import net.arcanamod.items.attachment.Core;
@@ -17,12 +24,6 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class GauntletItem extends MagicDeviceItem{
 	public GauntletItem(Item.Properties properties){

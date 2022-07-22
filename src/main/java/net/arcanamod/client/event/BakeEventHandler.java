@@ -1,6 +1,10 @@
 package net.arcanamod.client.event;
 
-import net.arcanamod.ArcanaVariables;
+import javax.annotation.Nonnull;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.client.model.baked.WardenedBlockBakedModel;
 import net.minecraft.block.BlockState;
@@ -11,10 +15,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import javax.annotation.Nonnull;
 
 @Mod.EventBusSubscriber(Dist.CLIENT)
 public class BakeEventHandler {

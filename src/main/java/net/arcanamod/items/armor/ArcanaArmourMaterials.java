@@ -1,5 +1,9 @@
 package net.arcanamod.items.armor;
 
+import java.util.function.Supplier;
+
+import javax.annotation.Nonnull;
+
 import net.arcanamod.items.ArcanaItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -9,9 +13,6 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nonnull;
-import java.util.function.Supplier;
 
 public enum ArcanaArmourMaterials implements IArmorMaterial{
 	GOGGLES("arcana:goggles_of_revealing", 5, new int[]{0, 0, 0, 2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0, Ingredient::fromItems),

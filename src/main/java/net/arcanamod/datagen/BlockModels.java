@@ -1,12 +1,12 @@
 package net.arcanamod.datagen;
 
+import javax.annotation.Nonnull;
+
 import net.arcanamod.Arcana;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-
-import javax.annotation.Nonnull;
 
 public class BlockModels extends BlockModelProvider{
 	

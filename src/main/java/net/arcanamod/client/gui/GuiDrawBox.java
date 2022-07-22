@@ -1,10 +1,11 @@
 package net.arcanamod.client.gui;
 
-import com.mojang.blaze3d.matrix.MatrixStack;
-import com.mojang.blaze3d.systems.RenderSystem;
+import static net.minecraftforge.fml.client.gui.GuiUtils.drawTexturedModalRect;
+
 import org.lwjgl.opengl.GL11;
 
-import static net.minecraftforge.fml.client.gui.GuiUtils.drawTexturedModalRect;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.systems.RenderSystem;
 
 public class GuiDrawBox {
 	@SuppressWarnings("deprecation")

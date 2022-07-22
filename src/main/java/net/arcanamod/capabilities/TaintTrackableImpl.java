@@ -1,8 +1,8 @@
 package net.arcanamod.capabilities;
 
-import net.minecraft.nbt.CompoundNBT;
-
 import javax.annotation.Nonnull;
+
+import net.minecraft.nbt.CompoundNBT;
 
 public class TaintTrackableImpl implements TaintTrackable{
 	

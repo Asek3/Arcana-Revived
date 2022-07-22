@@ -1,35 +1,31 @@
 package net.arcanamod.compat.jei;
 
+import static net.arcanamod.ArcanaVariables.arcLoc;
+import static net.arcanamod.compat.ArcanaJeiPlugin.ARCANE_WORKBENCH_UUID;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IGuiIngredientGroup;
 import mezz.jei.api.gui.ingredient.IGuiItemStackGroup;
-import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.helpers.IJeiHelpers;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.arcanamod.Arcana;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.UndecidedAspectStack;
 import net.arcanamod.blocks.ArcanaBlocks;
-import net.arcanamod.capabilities.Researcher;
 import net.arcanamod.items.recipes.ArcaneCraftingShapedRecipe;
-import net.arcanamod.systems.research.ResearchBooks;
-import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
-
-import javax.annotation.Nonnull;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.stream.Collectors;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
-import static net.arcanamod.compat.ArcanaJeiPlugin.ARCANE_WORKBENCH_UUID;
 
 public class ArcaneCraftingCategory implements IRecipeCategory<ArcaneCraftingShapedRecipe> {
     private final IJeiHelpers jeiHelpers;

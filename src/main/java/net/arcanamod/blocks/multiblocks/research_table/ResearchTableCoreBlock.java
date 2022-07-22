@@ -1,5 +1,10 @@
 package net.arcanamod.blocks.multiblocks.research_table;
 
+import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableComponentBlock.COM_OFFSET;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.bases.GroupedBlock;
@@ -8,7 +13,11 @@ import net.arcanamod.blocks.multiblocks.StaticComponent;
 import net.arcanamod.blocks.tiles.ResearchTableTileEntity;
 import net.arcanamod.items.ArcanaItems;
 import net.arcanamod.util.ShapeUtils;
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderType;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.HorizontalBlock;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -31,11 +40,6 @@ import net.minecraft.util.math.vector.Vector3i;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.blocks.multiblocks.research_table.ResearchTableComponentBlock.COM_OFFSET;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault

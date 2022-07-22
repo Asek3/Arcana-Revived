@@ -1,12 +1,11 @@
 package net.arcanamod.util;
 
-import org.apache.commons.io.IOUtils;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+
+import org.apache.commons.io.IOUtils;
 
 /**
  * Patreon, Developer and Contributor authorisation.

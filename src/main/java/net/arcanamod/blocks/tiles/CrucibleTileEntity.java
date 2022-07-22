@@ -1,5 +1,14 @@
 package net.arcanamod.blocks.tiles;
 
+import static net.arcanamod.blocks.CrucibleBlock.FULL;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.Aspect;
@@ -28,14 +37,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.util.Constants;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
-import static net.arcanamod.blocks.CrucibleBlock.FULL;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

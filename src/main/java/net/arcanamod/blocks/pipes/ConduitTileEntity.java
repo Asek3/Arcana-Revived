@@ -1,9 +1,9 @@
 package net.arcanamod.blocks.pipes;
 
+import java.util.Optional;
+
 import net.arcanamod.aspects.Aspect;
 import net.minecraft.util.Direction;
-
-import java.util.Optional;
 
 public class ConduitTileEntity extends TubeTileEntity{
 	

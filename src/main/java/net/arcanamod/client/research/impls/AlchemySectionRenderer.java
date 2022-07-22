@@ -1,6 +1,12 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
+
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.client.gui.ClientUiUtil;
 import net.arcanamod.client.gui.ResearchEntryScreen;
@@ -9,11 +15,6 @@ import net.arcanamod.systems.research.impls.AlchemySection;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
-
-import java.util.List;
-
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
-import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
 
 public class AlchemySectionRenderer extends AbstractCraftingSectionRenderer<AlchemySection>{
 	

@@ -1,8 +1,15 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.client.research.PuzzleRenderer;
 import net.arcanamod.containers.slots.AspectSlot;
@@ -16,12 +23,6 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.fml.client.gui.GuiUtils;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
 
 public class GuessworkPuzzleRenderer extends AbstractGui implements PuzzleRenderer<Guesswork>{
 	

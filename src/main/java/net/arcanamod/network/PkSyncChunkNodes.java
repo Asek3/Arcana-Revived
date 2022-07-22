@@ -1,8 +1,15 @@
 package net.arcanamod.network;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.function.Supplier;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.Arcana;
-import net.arcanamod.world.Node;
 import net.arcanamod.capabilities.AuraChunk;
+import net.arcanamod.world.Node;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.INBT;
 import net.minecraft.nbt.ListNBT;
@@ -11,12 +18,6 @@ import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.fml.network.NetworkEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.function.Supplier;
 
 public class PkSyncChunkNodes{
 	

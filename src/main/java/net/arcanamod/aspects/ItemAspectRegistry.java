@@ -1,6 +1,27 @@
 package net.arcanamod.aspects;
 
-import com.google.gson.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+import java.util.function.BiConsumer;
+
+import javax.annotation.Nonnull;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.aspects.handlers.AspectHolder;
 import net.arcanamod.items.CrystalItem;
@@ -23,12 +44,6 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.util.JSONUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import javax.annotation.Nonnull;
-import java.util.*;
-import java.util.function.BiConsumer;
 
 /**
  * Associates items with aspects. Every item is associated with a set of aspect stacks, and item stack may be given extra

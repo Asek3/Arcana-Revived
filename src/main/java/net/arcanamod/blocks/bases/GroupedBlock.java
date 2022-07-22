@@ -1,8 +1,8 @@
 package net.arcanamod.blocks.bases;
 
-import net.minecraft.item.ItemGroup;
-
 import javax.annotation.Nullable;
+
+import net.minecraft.item.ItemGroup;
 
 public interface GroupedBlock{
 	

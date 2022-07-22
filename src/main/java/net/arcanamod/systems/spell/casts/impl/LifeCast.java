@@ -5,7 +5,7 @@ import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.effects.ArcanaEffects;
-import net.arcanamod.systems.spell.*;
+import net.arcanamod.systems.spell.SpellValues;
 import net.arcanamod.systems.spell.casts.Cast;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;

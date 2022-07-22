@@ -1,6 +1,12 @@
 package net.arcanamod.client.event;
 
-import net.arcanamod.client.render.particles.*;
+import net.arcanamod.client.render.particles.ArcanaParticles;
+import net.arcanamod.client.render.particles.AspectHelixParticle;
+import net.arcanamod.client.render.particles.AspectParticle;
+import net.arcanamod.client.render.particles.HungryNodeBlockParticle;
+import net.arcanamod.client.render.particles.HungryNodeDiscParticle;
+import net.arcanamod.client.render.particles.NodeParticle;
+import net.arcanamod.client.render.particles.NumberParticle;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

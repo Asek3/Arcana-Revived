@@ -1,15 +1,28 @@
 package net.arcanamod.client.research;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
-import net.arcanamod.client.research.impls.*;
+
+import net.arcanamod.client.research.impls.AlchemySectionRenderer;
+import net.arcanamod.client.research.impls.ArcaneCraftingSectionRenderer;
+import net.arcanamod.client.research.impls.AspectCombosSectionRenderer;
+import net.arcanamod.client.research.impls.CraftingSectionRenderer;
+import net.arcanamod.client.research.impls.ImageSectionRenderer;
+import net.arcanamod.client.research.impls.SmeltingSectionRenderer;
+import net.arcanamod.client.research.impls.StringSectionRenderer;
 import net.arcanamod.systems.research.EntrySection;
-import net.arcanamod.systems.research.impls.*;
+import net.arcanamod.systems.research.impls.AlchemySection;
+import net.arcanamod.systems.research.impls.ArcaneCraftingSection;
+import net.arcanamod.systems.research.impls.AspectCombosSection;
+import net.arcanamod.systems.research.impls.CraftingSection;
+import net.arcanamod.systems.research.impls.ImageSection;
+import net.arcanamod.systems.research.impls.SmeltingSection;
+import net.arcanamod.systems.research.impls.StringSection;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.entity.player.PlayerEntity;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public interface EntrySectionRenderer<T extends EntrySection>{
 	

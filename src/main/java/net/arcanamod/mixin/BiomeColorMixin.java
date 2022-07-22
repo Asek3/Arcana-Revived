@@ -1,5 +1,14 @@
 package net.arcanamod.mixin;
 
+import static net.minecraft.world.biome.BiomeColors.WATER_COLOR;
+
+import java.util.Iterator;
+
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.client.gui.UiUtil;
 import net.arcanamod.systems.taint.Taint;
@@ -9,14 +18,6 @@ import net.minecraft.world.IBlockDisplayReader;
 import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-
-import java.util.Iterator;
-
-import static net.minecraft.world.biome.BiomeColors.WATER_COLOR;
 
 // Lets mixin into BiomeColors for taint "biome" water :)
 @OnlyIn(Dist.CLIENT)

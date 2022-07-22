@@ -1,11 +1,11 @@
 package net.arcanamod.items.tools;
 
+import java.util.function.Supplier;
+
 import net.arcanamod.items.ArcanaItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
-
-import java.util.function.Supplier;
 
 public enum ArcanaToolTiers implements IItemTier{
 	ARCANIUM(3, 1125, 7.0F, 2.5F, 17, () -> Ingredient.fromItems(ArcanaItems.ARCANIUM_INGOT.get())),

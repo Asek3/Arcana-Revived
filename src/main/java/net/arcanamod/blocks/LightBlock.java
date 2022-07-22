@@ -1,12 +1,12 @@
 package net.arcanamod.blocks;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import java.util.Random;
 
 public class LightBlock extends Block {
 	public LightBlock(Block.Properties properties) {

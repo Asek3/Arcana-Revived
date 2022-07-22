@@ -1,5 +1,14 @@
 package net.arcanamod.capabilities;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+
 import net.arcanamod.event.ResearchEvent;
 import net.arcanamod.systems.research.Puzzle;
 import net.arcanamod.systems.research.ResearchBooks;
@@ -7,8 +16,6 @@ import net.arcanamod.systems.research.ResearchEntry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-
-import java.util.*;
 
 public class ResearcherImpl implements Researcher{
 	

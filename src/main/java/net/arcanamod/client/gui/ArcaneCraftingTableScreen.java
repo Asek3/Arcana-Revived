@@ -1,7 +1,15 @@
 package net.arcanamod.client.gui;
 
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
+import static net.arcanamod.Arcana.arcLoc;
+
+import java.util.List;
+import java.util.Optional;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.UndecidedAspectStack;
 import net.arcanamod.aspects.handlers.AspectHandler;
@@ -21,13 +29,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
-
-import java.util.List;
-import java.util.Optional;
-
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
-import static net.arcanamod.Arcana.arcLoc;
 
 public class ArcaneCraftingTableScreen extends ContainerScreen<ArcaneCraftingTableContainer> {
 	private static final ResourceLocation BG = arcLoc("textures/gui/container/arcaneworkbench.png");

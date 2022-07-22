@@ -1,6 +1,19 @@
 package net.arcanamod.worldgen;
 
+import static java.util.Objects.requireNonNull;
+import static net.arcanamod.world.NodeType.DEFAULT;
+import static net.arcanamod.world.NodeType.SPECIAL_TYPES;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+import java.util.function.Supplier;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.serialization.Codec;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.Aspect;
@@ -23,17 +36,6 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-import java.util.function.Supplier;
-
-import static java.util.Objects.requireNonNull;
-import static net.arcanamod.world.NodeType.DEFAULT;
-import static net.arcanamod.world.NodeType.SPECIAL_TYPES;
 
 @SuppressWarnings("deprecation")
 @ParametersAreNonnullByDefault

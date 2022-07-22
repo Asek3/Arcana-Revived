@@ -1,7 +1,14 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ClientUiUtil.drawModalRectWithCustomSizedTexture;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.client.research.RequirementRenderer;
 import net.arcanamod.systems.research.Puzzle;
 import net.arcanamod.systems.research.ResearchBooks;
@@ -12,12 +19,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-import static net.arcanamod.client.gui.ClientUiUtil.drawModalRectWithCustomSizedTexture;
 
 public class PuzzleRequirementRenderer implements RequirementRenderer<PuzzleRequirement>{
 	

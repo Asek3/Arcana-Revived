@@ -1,10 +1,9 @@
 package net.arcanamod.compat.jei;
 
-import net.arcanamod.aspects.Aspect;
-import net.arcanamod.aspects.Aspects;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import net.arcanamod.aspects.Aspect;
 
 public class AspectCrystallizerRecipeHandler {
 	public static List<AspectCrystallizerRecipeHandler> RECIPES = new ArrayList<>();

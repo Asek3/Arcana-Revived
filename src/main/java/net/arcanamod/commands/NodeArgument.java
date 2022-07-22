@@ -1,17 +1,18 @@
 package net.arcanamod.commands;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import com.mojang.brigadier.StringReader;
 import com.mojang.brigadier.arguments.ArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.exceptions.SimpleCommandExceptionType;
+
 import net.arcanamod.world.Node;
 import net.minecraft.command.CommandSource;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.text.TranslationTextComponent;
-
-import java.util.Arrays;
-import java.util.Collection;
 
 public class NodeArgument implements ArgumentType<NodeSelector>{
 	

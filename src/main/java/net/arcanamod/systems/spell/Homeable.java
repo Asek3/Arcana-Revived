@@ -1,13 +1,11 @@
 package net.arcanamod.systems.spell;
 
+import java.util.List;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MoverType;
 import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public interface Homeable {
     static <T extends Entity & Homeable> void startHoming(T toHome) {

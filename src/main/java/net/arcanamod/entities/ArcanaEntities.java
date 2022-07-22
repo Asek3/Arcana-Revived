@@ -1,15 +1,24 @@
 package net.arcanamod.entities;
 
+import static net.arcanamod.Arcana.arcLoc;
+
 import net.arcanamod.Arcana;
+import net.arcanamod.entities.tainted.TaintedCaveSpiderEntity;
+import net.arcanamod.entities.tainted.TaintedDonkeyEntity;
+import net.arcanamod.entities.tainted.TaintedEntity;
+import net.arcanamod.entities.tainted.TaintedPandaEntity;
+import net.arcanamod.entities.tainted.TaintedPolarBearEntity;
+import net.arcanamod.entities.tainted.TaintedRabbitEntity;
+import net.arcanamod.entities.tainted.TaintedSkeletonEntity;
+import net.arcanamod.entities.tainted.TaintedSlimeEntity;
+import net.arcanamod.entities.tainted.TaintedSnowGolemEntity;
+import net.arcanamod.entities.tainted.TaintedSquidEntity;
 import net.arcanamod.systems.taint.Taint;
-import net.arcanamod.entities.tainted.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 /**
  * Initialize Entities here

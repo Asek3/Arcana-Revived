@@ -1,20 +1,59 @@
 package net.arcanamod.datagen;
 
+import static net.arcanamod.ArcanaVariables.arcLoc;
+import static net.arcanamod.blocks.ArcanaBlocks.ARCANE_STONE_BRICKS_SLAB;
+import static net.arcanamod.blocks.ArcanaBlocks.ARCANE_STONE_BRICKS_STAIRS;
+import static net.arcanamod.blocks.ArcanaBlocks.ARCANE_STONE_BRICKS_WALL;
+import static net.arcanamod.blocks.ArcanaBlocks.ARCANE_STONE_SLAB;
+import static net.arcanamod.blocks.ArcanaBlocks.ARCANE_STONE_STAIRS;
+import static net.arcanamod.blocks.ArcanaBlocks.ARCANE_STONE_WALL;
+import static net.arcanamod.blocks.ArcanaBlocks.CRACKED_DUNGEON_BRICKS_SLAB;
+import static net.arcanamod.blocks.ArcanaBlocks.CRACKED_DUNGEON_BRICKS_STAIRS;
+import static net.arcanamod.blocks.ArcanaBlocks.CRACKED_DUNGEON_BRICKS_WALL;
+import static net.arcanamod.blocks.ArcanaBlocks.DAIR_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.DAIR_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.DEAD_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.DEAD_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.DUNGEON_BRICKS_SLAB;
+import static net.arcanamod.blocks.ArcanaBlocks.DUNGEON_BRICKS_STAIRS;
+import static net.arcanamod.blocks.ArcanaBlocks.DUNGEON_BRICKS_WALL;
+import static net.arcanamod.blocks.ArcanaBlocks.EUCALYPTUS_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.EUCALYPTUS_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.GREATWOOD_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.GREATWOOD_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.HAWTHORN_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.HAWTHORN_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.MOSSY_DUNGEON_BRICKS_SLAB;
+import static net.arcanamod.blocks.ArcanaBlocks.MOSSY_DUNGEON_BRICKS_STAIRS;
+import static net.arcanamod.blocks.ArcanaBlocks.MOSSY_DUNGEON_BRICKS_WALL;
+import static net.arcanamod.blocks.ArcanaBlocks.SILVERWOOD_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.SILVERWOOD_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.SILVER_BLOCK;
+import static net.arcanamod.blocks.ArcanaBlocks.SILVER_ORE;
+import static net.arcanamod.blocks.ArcanaBlocks.TRYPOPHOBIUS_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.TRYPOPHOBIUS_FENCE_GATE;
+import static net.arcanamod.blocks.ArcanaBlocks.VOID_METAL_BLOCK;
+import static net.arcanamod.blocks.ArcanaBlocks.WILLOW_FENCE;
+import static net.arcanamod.blocks.ArcanaBlocks.WILLOW_FENCE_GATE;
+import static net.arcanamod.datagen.ArcanaDataGenerators.DAIR;
+import static net.arcanamod.datagen.ArcanaDataGenerators.DEAD;
+import static net.arcanamod.datagen.ArcanaDataGenerators.EUCALYPTUS;
+import static net.arcanamod.datagen.ArcanaDataGenerators.GREATWOOD;
+import static net.arcanamod.datagen.ArcanaDataGenerators.HAWTHORN;
+import static net.arcanamod.datagen.ArcanaDataGenerators.SILVERWOOD;
+import static net.arcanamod.datagen.ArcanaDataGenerators.TRYPOPHOBIUS;
+import static net.arcanamod.datagen.ArcanaDataGenerators.WILLOW;
+
+import javax.annotation.Nonnull;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import javax.annotation.Nonnull;
-
-import static net.arcanamod.ArcanaVariables.arcLoc;
-import static net.arcanamod.blocks.ArcanaBlocks.*;
-import static net.arcanamod.datagen.ArcanaDataGenerators.*;
 
 public class Blockstates extends BlockStateProvider{
 

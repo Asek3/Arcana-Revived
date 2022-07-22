@@ -1,18 +1,17 @@
 package net.arcanamod.client.gui;
 
+import static net.minecraft.util.text.ITextComponent.getTextComponentOrEmpty;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.ArcanaConfig;
-import net.minecraft.client.gui.AbstractGui;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.widget.list.OptionsRowList;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.settings.BooleanOption;
 import net.minecraft.client.settings.SliderPercentageOption;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
-
-import static net.minecraft.util.text.ITextComponent.getTextComponentOrEmpty;
 
 public final class ConfigScreen extends Screen {
 

@@ -1,6 +1,12 @@
 package net.arcanamod.client.gui;
 
+import static net.arcanamod.Arcana.arcLoc;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mojang.blaze3d.systems.RenderSystem;
+
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.AspectStack;
@@ -29,11 +35,6 @@ import net.minecraftforge.common.ForgeMod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.gui.GuiUtils;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static net.arcanamod.Arcana.arcLoc;
 
 @Mod.EventBusSubscriber(modid = Arcana.MODID, value = Dist.CLIENT)
 public final class Huds{

@@ -1,15 +1,16 @@
 package net.arcanamod.client.research.impls;
 
+import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
+import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.client.gui.ResearchEntryScreen;
 import net.arcanamod.systems.research.impls.SmeltingSection;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.AbstractCookingRecipe;
 import net.minecraft.item.crafting.IRecipe;
-
-import static net.arcanamod.client.gui.ClientUiUtil.drawTexturedModalRect;
-import static net.arcanamod.client.gui.ResearchEntryScreen.HEIGHT_OFFSET;
 
 public class SmeltingSectionRenderer extends AbstractCraftingSectionRenderer<SmeltingSection>{
 	

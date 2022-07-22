@@ -1,5 +1,7 @@
 package net.arcanamod.systems.spell.casts.impl;
 
+import java.util.Optional;
+
 import net.arcanamod.ArcanaVariables;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectUtils;
@@ -7,7 +9,7 @@ import net.arcanamod.aspects.Aspects;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.tiles.WardenedBlockTileEntity;
 import net.arcanamod.effects.ArcanaEffects;
-import net.arcanamod.systems.spell.*;
+import net.arcanamod.systems.spell.SpellValues;
 import net.arcanamod.systems.spell.casts.Cast;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -19,8 +21,6 @@ import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import java.util.Optional;
 
 public class ArmourCast extends Cast {
 

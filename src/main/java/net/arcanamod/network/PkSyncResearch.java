@@ -1,5 +1,14 @@
 package net.arcanamod.network;
 
+import static java.lang.String.format;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.Supplier;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import net.arcanamod.systems.research.Puzzle;
 import net.arcanamod.systems.research.ResearchBook;
 import net.arcanamod.systems.research.ResearchBooks;
@@ -9,14 +18,6 @@ import net.minecraft.nbt.ListNBT;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.function.Supplier;
-
-import static java.lang.String.format;
 
 /**
  * Syncs all existing research. Not to be confused with {@link PkSyncPlayerResearch}, which syncs the player's progress.

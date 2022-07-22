@@ -1,6 +1,9 @@
 package net.arcanamod.client.render.tiles;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.blocks.tiles.PedestalTileEntity;
 import net.minecraft.client.Minecraft;
@@ -11,8 +14,6 @@ import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3f;
-
-import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

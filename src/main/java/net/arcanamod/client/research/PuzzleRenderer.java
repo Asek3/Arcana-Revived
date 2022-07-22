@@ -1,14 +1,21 @@
 package net.arcanamod.client.research;
 
+import static net.minecraft.client.gui.AbstractGui.blit;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
+import net.arcanamod.Arcana;
 import net.arcanamod.client.gui.ResearchTableScreen;
 import net.arcanamod.client.research.impls.ChemistryPuzzleRenderer;
-import net.arcanamod.client.research.impls.ThaumaturgyPuzzleRenderer;
-import net.arcanamod.systems.research.impls.Chemistry;
-import net.arcanamod.Arcana;
 import net.arcanamod.client.research.impls.GuessworkPuzzleRenderer;
+import net.arcanamod.client.research.impls.ThaumaturgyPuzzleRenderer;
 import net.arcanamod.containers.slots.AspectSlot;
 import net.arcanamod.systems.research.Puzzle;
+import net.arcanamod.systems.research.impls.Chemistry;
 import net.arcanamod.systems.research.impls.Guesswork;
 import net.arcanamod.systems.research.impls.Thaumaturgy;
 import net.minecraft.client.Minecraft;
@@ -16,12 +23,6 @@ import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.util.ResourceLocation;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static net.minecraft.client.gui.AbstractGui.blit;
 
 public interface PuzzleRenderer<T extends Puzzle> {
 	ResourceLocation PAPER = new ResourceLocation(Arcana.MODID, "textures/gui/research/temp_puzzle_overlay.png");

@@ -1,6 +1,7 @@
 package net.arcanamod.systems.spell.modules.core;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.client.gui.ClientUiUtil;
 import net.arcanamod.systems.spell.SpellState;
 import net.arcanamod.systems.spell.modules.SpellModule;

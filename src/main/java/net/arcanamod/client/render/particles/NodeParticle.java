@@ -1,7 +1,16 @@
 package net.arcanamod.client.render.particles;
 
+import static net.arcanamod.client.gui.UiUtil.blend;
+import static net.arcanamod.client.gui.UiUtil.blue;
+import static net.arcanamod.client.gui.UiUtil.green;
+import static net.arcanamod.client.gui.UiUtil.red;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.Arcana;
 import net.arcanamod.aspects.Aspect;
@@ -22,11 +31,6 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-
-import static net.arcanamod.client.gui.UiUtil.*;
 
 @OnlyIn(Dist.CLIENT)
 @ParametersAreNonnullByDefault

@@ -1,13 +1,25 @@
 package net.arcanamod.blocks;
 
+import static net.minecraft.block.FarmlandBlock.MOISTURE;
+import static net.minecraft.block.SnowyDirtBlock.SNOWY;
+import static net.minecraftforge.common.ForgeHooks.onFarmlandTrample;
+
+import java.util.Random;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaSounds;
 import net.arcanamod.blocks.bases.GroupedBlock;
 import net.arcanamod.capabilities.TaintTrackable;
 import net.arcanamod.systems.taint.Taint;
-import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SnowBlock;
+import net.minecraft.block.SpreadableSnowyDirtBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.BlockItemUseContext;
@@ -26,14 +38,6 @@ import net.minecraft.world.lighting.LightEngine;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.FarmlandWaterManager;
 import net.minecraftforge.common.IPlantable;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Random;
-
-import static net.minecraft.block.FarmlandBlock.MOISTURE;
-import static net.minecraft.block.SnowyDirtBlock.SNOWY;
-import static net.minecraftforge.common.ForgeHooks.onFarmlandTrample;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

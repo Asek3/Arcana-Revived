@@ -1,14 +1,30 @@
 package net.arcanamod.items;
 
+import static net.arcanamod.ArcanaSounds.playPhialCorkpopSound;
+
+import java.util.Collections;
+import java.util.List;
+
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.Arcana;
-import net.arcanamod.aspects.*;
+import net.arcanamod.aspects.Aspect;
+import net.arcanamod.aspects.AspectStack;
+import net.arcanamod.aspects.AspectUtils;
+import net.arcanamod.aspects.Aspects;
+import net.arcanamod.aspects.IOverrideAspects;
 import net.arcanamod.aspects.handlers.AspectBattery;
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.aspects.handlers.AspectHandlerCapability;
 import net.arcanamod.aspects.handlers.AspectHolder;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.Rarity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
@@ -19,13 +35,6 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
-
-import javax.annotation.Nullable;
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Collections;
-import java.util.List;
-
-import static net.arcanamod.ArcanaSounds.playPhialCorkpopSound;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault

@@ -1,10 +1,10 @@
 package net.arcanamod.util;
 
-import com.google.common.graph.Graph;
-
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Consumer;
+
+import com.google.common.graph.Graph;
 
 // Google Guava 23.1+ has the class Traverser, which would do all of this for me.
 // Unfortunately, we're stuck on 21.0.

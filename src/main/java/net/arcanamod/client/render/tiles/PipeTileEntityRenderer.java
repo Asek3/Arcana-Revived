@@ -1,6 +1,11 @@
 package net.arcanamod.client.render.tiles;
 
+import java.util.Random;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import mcp.MethodsReturnNonnullByDefault;
 import net.arcanamod.aspects.AspectUtils;
 import net.arcanamod.blocks.pipes.AspectSpeck;
@@ -10,9 +15,6 @@ import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-
-import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.Random;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault

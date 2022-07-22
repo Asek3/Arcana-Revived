@@ -1,5 +1,7 @@
 package net.arcanamod.world;
 
+import java.util.UUID;
+
 import net.arcanamod.aspects.handlers.AspectBattery;
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.minecraft.dispenser.IPosition;
@@ -7,8 +9,6 @@ import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
-
-import java.util.UUID;
 
 // implements position for BlockPos constructor convenience
 public class Node implements IPosition{

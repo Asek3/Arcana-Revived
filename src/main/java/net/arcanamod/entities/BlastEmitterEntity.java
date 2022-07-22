@@ -1,5 +1,11 @@
 package net.arcanamod.entities;
 
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+
 import net.arcanamod.systems.spell.casts.Cast;
 import net.arcanamod.systems.spell.casts.ICast;
 import net.arcanamod.util.Pair;
@@ -19,13 +25,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.function.Consumer;
 
 @SuppressWarnings("unchecked") // Yes IntelliJ I checked that don't scream at me
 public class BlastEmitterEntity extends Entity {

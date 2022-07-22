@@ -1,11 +1,12 @@
 package net.arcanamod.mixin;
 
-import net.minecraftforge.fml.ModContainer;
-import net.minecraftforge.fml.config.ModConfig;
+import java.util.EnumMap;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
-import java.util.EnumMap;
+import net.minecraftforge.fml.ModContainer;
+import net.minecraftforge.fml.config.ModConfig;
 
 @Mixin(ModContainer.class)
 public interface ModContainerAccessor{

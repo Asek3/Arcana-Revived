@@ -1,10 +1,10 @@
 package net.arcanamod.capabilities;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.nbt.CompoundNBT;
-
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.nbt.CompoundNBT;
 
 /**
  * Attached to all living entities. Provides methods for checking whether an entity is within a taint biome,

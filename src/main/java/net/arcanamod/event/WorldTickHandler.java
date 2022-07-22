@@ -1,6 +1,12 @@
 package net.arcanamod.event;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.function.Consumer;
+
 import com.google.common.collect.ConcurrentHashMultiset;
+
 import net.arcanamod.world.AuraView;
 import net.arcanamod.world.ServerAuraView;
 import net.minecraft.world.World;
@@ -8,11 +14,6 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.function.Consumer;
 
 @Mod.EventBusSubscriber
 public class WorldTickHandler{

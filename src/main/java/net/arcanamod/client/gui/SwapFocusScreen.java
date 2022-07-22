@@ -1,6 +1,12 @@
 package net.arcanamod.client.gui;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Random;
+
 import com.mojang.blaze3d.matrix.MatrixStack;
+
 import net.arcanamod.ClientProxy;
 import net.arcanamod.items.MagicDeviceItem;
 import net.arcanamod.items.attachment.FocusItem;
@@ -13,13 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.fml.client.gui.GuiUtils;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Random;
 
 public class SwapFocusScreen extends Screen {
 	private final Hand hand;

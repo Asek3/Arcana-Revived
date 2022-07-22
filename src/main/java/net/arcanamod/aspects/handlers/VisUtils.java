@@ -1,13 +1,14 @@
 package net.arcanamod.aspects.handlers;
 
+import java.util.Comparator;
+import java.util.List;
+
+import javax.annotation.Nullable;
+
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.DelegatingAspectCell;
-
-import javax.annotation.Nullable;
-import java.util.Comparator;
-import java.util.List;
 
 public final class VisUtils{
 	
