@@ -14,7 +14,6 @@ import mezz.jei.api.ingredients.IIngredientType;
 import net.arcanamod.aspects.Aspect;
 import net.arcanamod.aspects.AspectStack;
 import net.arcanamod.aspects.AspectUtils;
-import net.arcanamod.aspects.Aspects;
 import net.arcanamod.aspects.UndecidedAspectStack;
 import net.arcanamod.client.gui.ClientUiUtil;
 import net.minecraft.client.util.ITooltipFlag;
@@ -27,11 +26,8 @@ public class AspectIngredient extends AspectStack implements Cloneable {
 	
 	public boolean isUndecided = false;
 	
-	public AspectIngredient(Aspect aspect, float amount, boolean isUndecided){
-		this.isEmpty = amount <= 0 || aspect == Aspects.EMPTY;
-		
-		this.aspect = isEmpty ? Aspects.EMPTY : aspect;
-		this.amount = isEmpty ? 0 : amount;
+	public AspectIngredient(Aspect aspect, float amount, boolean isUndecided){		
+		super(aspect, amount);
 		
 		this.isUndecided = isUndecided;
 	}

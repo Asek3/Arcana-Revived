@@ -15,6 +15,21 @@ public class AspectStack{
 	private float amount;
 	private Aspect aspect;
 	
+	public AspectStack(){
+		this(Aspects.EMPTY, 0);
+	}
+	
+	public AspectStack(Aspect aspect){
+		this(aspect, 1);
+	}
+	
+	public AspectStack(Aspect aspect, float amount){
+		boolean isEmpty = amount <= 0 || aspect == Aspects.EMPTY;
+		
+		this.aspect = isEmpty ? Aspects.EMPTY : aspect;
+		this.amount = isEmpty ? 0 : amount;
+	}
+	
 	public boolean isEmpty(){
 		return amount == 0 || aspect == Aspects.EMPTY;
 	}
@@ -35,21 +50,6 @@ public class AspectStack{
 	
 	public Aspect getAspect(){
 		return aspect;
-	}
-	
-	public AspectStack(){
-		this(Aspects.EMPTY, 0);
-	}
-	
-	public AspectStack(Aspect aspect){
-		this(aspect, 1);
-	}
-	
-	public AspectStack(Aspect aspect, float amount){
-		boolean isEmpty = amount <= 0 || aspect == Aspects.EMPTY;
-		
-		this.aspect = isEmpty ? Aspects.EMPTY : aspect;
-		this.amount = isEmpty ? 0 : amount;
 	}
 	
 	@Override
