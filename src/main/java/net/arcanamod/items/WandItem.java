@@ -1,15 +1,9 @@
 package net.arcanamod.items;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import mcp.MethodsReturnNonnullByDefault;
-import net.arcanamod.Arcana;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.CrucibleBlock;
 import net.arcanamod.items.attachment.Cap;
@@ -17,8 +11,6 @@ import net.arcanamod.items.attachment.Core;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CauldronBlock;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -31,13 +23,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.Color;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.Style;
 import net.minecraft.world.World;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
@@ -140,16 +126,5 @@ public class WandItem extends MagicDeviceItem{
 		stack.setTag(nbt);
 		return stack;
 	}
-	
-	@OnlyIn(Dist.CLIENT)
-	public void addInformation(@Nonnull ItemStack stack, @Nullable World world, @Nonnull List<ITextComponent> tooltip, @Nonnull ITooltipFlag flag){
-		super.addInformation(stack, world, tooltip, flag);
-		// Add focus info
-		try {
-			if (Minecraft.getInstance().player!=null)
-				tooltip.add(new StringTextComponent("Charms: "+Arrays.toString(Arcana.authManager.getUserLevel(Minecraft.getInstance().player.getDisplayName().getString()))).setStyle(Style.EMPTY.setColor(Color.fromInt(0xdec7fc))));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+
 }

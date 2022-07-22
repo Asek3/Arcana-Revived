@@ -34,7 +34,6 @@ import net.arcanamod.systems.research.Puzzle;
 import net.arcanamod.systems.research.Requirement;
 import net.arcanamod.systems.research.ResearchLoader;
 import net.arcanamod.systems.taint.Taint;
-import net.arcanamod.util.AuthorisationManager;
 import net.arcanamod.world.NodeType;
 import net.arcanamod.world.WorldInteractionsRegistry;
 import net.arcanamod.worldgen.ArcanaBiomes;
@@ -81,7 +80,6 @@ public class Arcana{
 	public static final String MODID = "arcana";
 	public static final Logger LOGGER = LogManager.getLogger("Arcana");
 	public static Arcana instance;
-	public static AuthorisationManager authManager;
 	
 	// Json Registry
 	public static ResearchLoader researchManager;
@@ -188,9 +186,7 @@ public class Arcana{
 		return new ResourceLocation(MODID, path);
 	}
 	
-	private void setup(FMLCommonSetupEvent event){
-		authManager = new AuthorisationManager();
-		
+	private void setup(FMLCommonSetupEvent event){		
 		// init, init, init, init, init, init, init, init
 		EntrySection.init();
 		Requirement.init();
