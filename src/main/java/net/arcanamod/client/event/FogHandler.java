@@ -4,10 +4,11 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import net.arcanamod.capabilities.TaintTrackable;
 import net.arcanamod.client.gui.UiUtil;
+import net.arcanamod.effects.ArcanaEffects;
 import net.arcanamod.fluids.ArcanaFluids;
-import net.arcanamod.systems.taint.Taint;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.math.BlockPos;
@@ -34,9 +35,9 @@ public class FogHandler{
 			fog.setRed(red);
 			fog.setGreen(green);
 			fog.setBlue(blue);
-		}else if(entity instanceof LivingEntity && Taint.isAreaInTaintBiome(pos, w)){
+		}else if(entity instanceof LivingEntity){
 			LivingEntity living = (LivingEntity)entity;
-			if (TaintTrackable.getFrom(living)!=null) {
+			if (TaintTrackable.getFrom(living)!=null || Minecraft.getInstance().player.isPotionActive(ArcanaEffects.TAINTED.get())) {
 				int colour = 0x4E2C5C;
 				float progress = Math.min(20, TaintTrackable.getFrom(living).getTimeInTaintBiome()) / 20f;
 				int blended = UiUtil.blend(colour, ((int) (fog.getRed() * 255) << 16) | ((int) (fog.getGreen() * 255) << 8) | ((int) (fog.getBlue() * 255)), progress);
@@ -51,12 +52,12 @@ public class FogHandler{
 	@SubscribeEvent
 	@OnlyIn(Dist.CLIENT)
 	public static void setFogDensity(EntityViewRenderEvent.FogDensity fog){
-		Entity entity = fog.getInfo().getRenderViewEntity();
+		Entity entity = fog.getInfo().getRenderViewEntity();	
 		World w = entity.getEntityWorld();
 		BlockPos pos = fog.getInfo().getBlockPos();
-		if(entity instanceof LivingEntity && Taint.isAreaInTaintBiome(pos, w)){
+		if(entity instanceof LivingEntity){
 			LivingEntity living = (LivingEntity)entity;
-			if (TaintTrackable.getFrom(living)!=null) {
+			if (TaintTrackable.getFrom(living)!=null || Minecraft.getInstance().player.isPotionActive(ArcanaEffects.TAINTED.get())) {
 				float progress = Math.min(20, TaintTrackable.getFrom(living).getTimeInTaintBiome()) / 20f;
 				fog.setDensity(fog.getDensity() + progress * .3f);
 			}
@@ -69,10 +70,10 @@ public class FogHandler{
 		Entity entity = fog.getInfo().getRenderViewEntity();
 		World w = entity.getEntityWorld();
 		BlockPos pos = fog.getInfo().getBlockPos();
-		if(entity instanceof LivingEntity && Taint.isAreaInTaintBiome(pos, w)){
+		if(entity instanceof LivingEntity){
 			LivingEntity living = (LivingEntity)entity;
 			TaintTrackable from = TaintTrackable.getFrom(living);
-			if(from!=null && from.isInTaintBiome()){
+			if((from!=null && from.isInTaintBiome()) || Minecraft.getInstance().player.isPotionActive(ArcanaEffects.TAINTED.get())){
 				float progress = Math.min(20, from.getTimeInTaintBiome()) / 30f;
 				RenderSystem.fogStart((1 - progress) * fog.getFarPlaneDistance() * .75f);
 				RenderSystem.fogEnd(fog.getFarPlaneDistance() * (1 - .8f * progress));
