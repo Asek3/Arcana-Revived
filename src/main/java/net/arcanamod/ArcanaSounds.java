@@ -19,7 +19,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ObjectHolderRegistry;
 
-@SuppressWarnings({"ConstantConditions", "DanglingJavadoc"})
 /**
  *	Sound class that contains:
  * 	- Impl (SoundEvent registration)
@@ -35,12 +34,10 @@ public class ArcanaSounds {
 	public static SoundType CRYSTAL = new SoundType(0.6F, 1.0F,Impl.crystal_break,Impl.crystal_place,Impl.crystal_place,Impl.crystal_break,Impl.crystal_place);
 
 	// SoundEvents
-	@SuppressWarnings("ConstantConditions")
 	public static void playPhialshelfSlideSound(PlayerEntity playerEntity){
 		playSound(playerEntity, ArcanaSounds.Impl.phialshelf_slide, SoundCategory.BLOCKS,0.4f,1.2f);
 	}
 
-	@SuppressWarnings("ConstantConditions")
 	public static void playPhialCorkpopSound(PlayerEntity playerEntity){
 		playSound(playerEntity, ArcanaSounds.Impl.phial_corkpop, SoundCategory.BLOCKS,0.4f,1.4f);
 	}
@@ -63,7 +60,6 @@ public class ArcanaSounds {
 	//Impl
 	@ObjectHolder(Arcana.MODID)
 	@ParametersAreNonnullByDefault
-	@SuppressWarnings({"null", "DanglingJavadoc"})
 	/**
 	 * Implementation of SoundEvents.
 	 * Every SoundEvent in this class will be registered.
@@ -168,7 +164,15 @@ public class ArcanaSounds {
 		static {
 			for (Field f : ArcanaSounds.Impl.class.getDeclaredFields()) {
 				if (f.isAnnotationPresent(SoundName.class)) {
-					ForgeRegistries.SOUND_EVENTS.register(new SoundEvent(new ResourceLocation(Arcana.MODID, f.getAnnotation(SoundName.class).value())).setRegistryName(f.getName().toLowerCase(Locale.ROOT)));
+					SoundEvent event = new SoundEvent(new ResourceLocation(Arcana.MODID, f.getAnnotation(SoundName.class).value()));
+					try {
+						f.set(SoundEvent.class, event);
+						ForgeRegistries.SOUND_EVENTS.register(event.setRegistryName(f.getName().toLowerCase(Locale.ROOT)));
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 
