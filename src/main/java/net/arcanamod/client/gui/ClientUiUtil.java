@@ -169,13 +169,15 @@ public class ClientUiUtil{
 		int offset = poolOffset;
 		for(Aspect aspect : vertical){
 			AspectHolder holder = aspects.findFirstHolderContaining(aspect);
-			renderVisFill(stack, holder.getStack(), holder.getCapacity(), true, x + offset, y + poolFromEdge);
+			if(holder != null)
+				renderVisFill(stack, holder.getStack(), holder.getCapacity(), true, x + offset, y + poolFromEdge);
 			offset += poolSpacing;
 		}
 		offset = poolOffset;
 		for(Aspect aspect : horizontal){
 			AspectHolder holder = aspects.findFirstHolderContaining(aspect);
-			renderVisFill(stack, holder.getStack(), holder.getCapacity(), false, x + poolFromEdge, y + offset);
+			if(holder != null)
+				renderVisFill(stack, holder.getStack(), holder.getCapacity(), false, x + poolFromEdge, y + offset);
 			offset += poolSpacing;
 		}
 	}
