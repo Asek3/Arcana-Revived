@@ -3,14 +3,7 @@ package net.arcanamod.systems.taint;
 import static net.arcanamod.blocks.DelegatingBlock.switchBlock;
 import static net.minecraft.entity.EntityClassification.MONSTER;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
@@ -266,10 +259,11 @@ public class Taint{
 		}
 	}
 	
-	private static Set<BlockPos> taintBlocks = new HashSet<>();
+	private static Set<BlockPos> taintBlocks = Collections.newSetFromMap(
+					new WeakHashMap<BlockPos, Boolean>()
+			);
 
 	public static boolean isAreaInTaintBiome(BlockPos pos, IBlockReader world){
-		
 		if(taintBlocks.contains(pos))
 			return true;
 		
@@ -291,7 +285,7 @@ public class Taint{
 						// ChunkRenderCache throws this when you try to check somewhere "out-of-bounds".
 					}
 					
-					if(counter >= 20) {
+					if(counter % 20 == 0) {
 						taintBlocks.add(pos);
 						return true;
 					}
