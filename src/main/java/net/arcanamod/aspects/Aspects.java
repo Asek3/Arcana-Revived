@@ -13,6 +13,7 @@ import javax.annotation.Nullable;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 
+import net.arcanamod.Arcana;
 import net.arcanamod.systems.taint.Taint;
 import net.arcanamod.util.Pair;
 import net.minecraft.util.ResourceLocation;
@@ -30,6 +31,8 @@ public class Aspects{
 	public static Aspect[] values(){
 		return ASPECTS.values().toArray(new Aspect[0]);
 	}
+
+	public static List<String> registeredNames = new ArrayList<>();
 	
 	public static BiMap<ResourceLocation, Aspect> ASPECTS = HashBiMap.create();
 	
@@ -216,8 +219,15 @@ public class Aspects{
 				.filter(entry -> !entry.equals(GREED))
 				.collect(Collectors.toList());
 	}
-	
+
 	public static void init(){
-		net.minecraftforge.fml.StartupMessageManager.addModMessage("Arcana: Aspect registration completed");
+		StringBuilder aspects = new StringBuilder();
+		for (int i = 0; i < registeredNames.size(); i++) {
+			aspects.append(registeredNames.get(i));
+			if (i < registeredNames.size() - 1) {
+				aspects.append(", ");
+			}
+		}
+		Arcana.LOGGER.info("Arcana: Registered aspects: [" + aspects + "]");
 	}
 }

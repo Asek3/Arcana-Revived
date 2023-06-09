@@ -10,8 +10,6 @@ import net.arcanamod.ArcanaVariables;
 import net.minecraft.util.ResourceLocation;
 
 public class Aspect {
-	private static Logger logger = LogManager.getLogger();
-
 	private final int id;
 	private final String aspectName;
 	private final ColorRange colors;
@@ -61,10 +59,7 @@ public class Aspect {
 		Aspect aspect = new Aspect(name, colors,aspectTickConsumer);
 		Aspects.ASPECTS.put(ArcanaVariables.arcLoc(name),aspect);
 		if (!ArcanaVariables.test) {
-			logger.info("Arcana: Added new aspect '" + name + "'");
-			try {
-				net.minecraftforge.fml.StartupMessageManager.addModMessage("Arcana: Added \"" + name + "\" aspect");
-			}catch(Exception ignored){}
+			Aspects.registeredNames.add(name);
 		}
 		return aspect;
 	}

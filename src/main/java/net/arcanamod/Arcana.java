@@ -74,7 +74,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
  * Base Arcana Class
  */
 @Mod(Arcana.MODID)
-public class Arcana{
+public class Arcana {
 	
 	// Main
 	public static final String MODID = "arcana";
