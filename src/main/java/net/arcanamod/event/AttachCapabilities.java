@@ -41,7 +41,6 @@ public class AttachCapabilities{
 		event.addCapability(AuraChunkCapability.KEY, cap);
 	}
 	
-	@SuppressWarnings("ConstantConditions")
 	@SubscribeEvent
 	public static void playerClone(PlayerEvent.Clone event){
 		Researcher.getFrom(event.getPlayer()).deserializeNBT(Researcher.getFrom(event.getOriginal()).serializeNBT());
@@ -51,6 +50,6 @@ public class AttachCapabilities{
 		// so we send a sync packet
 		// yes its always a ServerPlayerEntity
 		// we also need to delay by a tick so the new player can actually get the capability
-		WorldTickHandler.onTick.add(world -> Connection.sendSyncPlayerResearch(Researcher.getFrom(event.getPlayer()), (ServerPlayerEntity)event.getPlayer()));
+		ChunkLoadHandler.onTick.add(world -> Connection.sendSyncPlayerResearch(Researcher.getFrom(event.getPlayer()), (ServerPlayerEntity)event.getPlayer()));
 	}
 }

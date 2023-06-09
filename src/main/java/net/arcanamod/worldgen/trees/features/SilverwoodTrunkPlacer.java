@@ -19,7 +19,7 @@ import net.arcanamod.Arcana;
 import net.arcanamod.ArcanaConfig;
 import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.capabilities.AuraChunk;
-import net.arcanamod.event.WorldTickHandler;
+import net.arcanamod.event.ChunkLoadHandler;
 import net.arcanamod.mixin.TrunkPlacerTypeAccessor;
 import net.arcanamod.world.Node;
 import net.arcanamod.world.NodeType;
@@ -102,7 +102,7 @@ public class SilverwoodTrunkPlacer extends AbstractTrunkPlacer{
 			
 			// add pure node at half height
 			if(rand.nextInt(100) < ArcanaConfig.SILVERWOOD_NODE_CHANCE.get())
-				WorldTickHandler.onTick.add(w -> {
+				ChunkLoadHandler.onTick.add(w -> {
 					NodeType type = NodeType.PURE;
 					AspectHandler aspects = type.genBattery(pos, w, rand);
 					requireNonNull(AuraChunk.getFrom((Chunk)w.getChunk(pos))).addNode(new Node(aspects, type, x, y + height / 2f, z, 0));

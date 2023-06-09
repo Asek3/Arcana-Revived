@@ -72,7 +72,7 @@ public class ArcanaFeatures{
 	public static RegistryObject<FoliagePlacerType<SilverwoodFoliagePlacer>> SILVERWOOD_FOLIAGE = FOLAIGE_PLACERS.register("silverwood_foliage_placer", () -> new FoliagePlacerType<>(SilverwoodFoliagePlacer.CODEC));
 	
 	@SubscribeEvent(priority = EventPriority.HIGH)
-	public static void onItemRegister(BiomeLoadingEvent event){
+	public static void onBiomeLoading(BiomeLoadingEvent event){
 		event.getGeneration().withFeature(GenerationStage.Decoration.TOP_LAYER_MODIFICATION, ArcanaFeatures.NODE.withConfiguration(new NoFeatureConfig()).withPlacement(Placement.TOP_SOLID_HEIGHTMAP.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 		
 		if(event.getName().equals(arcLoc("magical_forest"))){

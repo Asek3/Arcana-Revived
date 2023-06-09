@@ -22,7 +22,7 @@ import net.arcanamod.aspects.handlers.AspectHandler;
 import net.arcanamod.blocks.ArcanaBlocks;
 import net.arcanamod.blocks.CrystalClusterBlock;
 import net.arcanamod.capabilities.AuraChunk;
-import net.arcanamod.event.WorldTickHandler;
+import net.arcanamod.event.ChunkLoadHandler;
 import net.arcanamod.world.Node;
 import net.arcanamod.world.NodeType;
 import net.minecraft.block.Block;
@@ -64,7 +64,7 @@ public class NodeFeature extends Feature<NoFeatureConfig>{
 		BlockPos newPos = pos.up(5 + rand.nextInt(2));
 		NodeType type = rand.nextInt(100) < ArcanaConfig.SPECIAL_NODE_CHANCE.get() ? new ArrayList<>(SPECIAL_TYPES).get(rand.nextInt(SPECIAL_TYPES.size())) : DEFAULT;
 		if(rand.nextInt(100) < ArcanaConfig.NODE_CHANCE.get()){
-			WorldTickHandler.onTick.add(newWorld -> {
+			ChunkLoadHandler.onTick.add(newWorld -> {
 				AspectHandler aspects = type.genBattery(newPos, newWorld, rand);
 				requireNonNull(AuraChunk.getFrom((Chunk)newWorld.getChunk(newPos))).addNode(new Node(aspects, type, newPos.getX(), newPos.getY(), newPos.getZ(), 0));
 				// Add some crystal clusters around here too

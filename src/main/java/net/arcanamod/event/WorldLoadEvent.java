@@ -24,6 +24,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.event.AddReloadListenerEvent;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -72,8 +73,8 @@ public class WorldLoadEvent{
 	}
 	
 	@SubscribeEvent
-	public static void serverStarting(FMLServerStartingEvent event){
-		CommandDispatcher<CommandSource> dispatcher = event.getServer().getCommandManager().getDispatcher();
+	public static void commandRegister(RegisterCommandsEvent event){
+		CommandDispatcher<CommandSource> dispatcher = event.getDispatcher();
 		ResearchCommand.register(dispatcher);
 		FillAspectCommand.register(dispatcher);
 		NodeCommand.register(dispatcher);
